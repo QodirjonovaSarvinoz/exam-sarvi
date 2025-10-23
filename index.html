@@ -50,7 +50,7 @@
                 <button
                     class="hidden lg:flex flex-col items-center text-sm text-gray-600 hover:text-green-600 relative">
                     <i data-lucide="shopping-cart" class="w-5 h-5"></i>
-                    <span>Корзина</span>
+                    <a href="./korzina.html"><span>Корзина</span></a>
                     <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1 rounded-full">2</span>
                 </button>
                 <button class="flex items-center space-x-2 hover:bg-gray-100 px-2 py-1 rounded-lg">
@@ -75,7 +75,7 @@
             <a href="#" class="px-6 py-3 hover:bg-gray-100 flex items-center space-x-2">
                 <i data-lucide="package" class="w-5 h-5"></i><span>Продукты</span>
             </a>
-            <a href="#" class="px-6 py-3 hover:bg-gray-100 flex items-center space-x-2">
+            <a href="./korzina.html" class="px-6 py-3 hover:bg-gray-100 flex items-center space-x-2">
                 <i data-lucide="shopping-cart" class="w-5 h-5"></i><span>Корзина</span>
             </a>
             <a href="#" class="px-6 py-3 hover:bg-gray-100 flex items-center space-x-2">
@@ -111,21 +111,6 @@
         </div>
     </div>
 
-    <script>
-        lucide.createIcons();
-
-        const menuToggle = document.getElementById('menuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        const catalogToggle = document.getElementById('catalogToggle');
-        const catalogMenu = document.getElementById('catalogMenu');
-        catalogToggle?.addEventListener('click', () => {
-            catalogMenu.classList.toggle('hidden');
-        });
-    </script>
 
     <section class="bg-[#faf8f4] py-10">
         <div class="max-w-[1200px] mx-auto px-4">
@@ -706,9 +691,21 @@
   </div>
 </footer>
 
-<script>
-  lucide.createIcons();
-</script>
+ <script>
+        lucide.createIcons();
+
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const catalogToggle = document.getElementById('catalogToggle');
+        const catalogMenu = document.getElementById('catalogMenu');
+        catalogToggle?.addEventListener('click', () => {
+            catalogMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 
 </html>

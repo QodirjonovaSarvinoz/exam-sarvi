@@ -1,5 +1,5 @@
 let pokupale = document.getElementById("pokupale")
-let slicePokupaleProduct = products.slice(products.length -24, products.length -20)
+let slicePokupaleProduct = products.slice(products.length -8, products.length -4)
 slicePokupaleProduct.map((el) =>{
     pokupale.innerHTML += `
     <div

@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="ru">
+ <!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -97,7 +97,6 @@
         </div>
     </header>
 
-
     <div class="w-full overflow-hidden bg-cover bg-center text-black" style="background-image: url('./images/bg.jpg');">
         <div
             class="max-w-[1200px] mx-auto flex flex-col sm:flex-row justify-start items-center px-2 sm:px-4 py-3 gap-2">
@@ -111,7 +110,6 @@
         </div>
     </div>
 
-
     <section class="bg-[#faf8f4] py-10">
         <div class="max-w-[1200px] mx-auto px-4">
 
@@ -120,9 +118,9 @@
                 <a href="#" class="text-green-600 font-semibold hover:underline">Все акции</a>
             </div>
 
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+            <div id="aktsi" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
 
-                <div
+                <!-- <div
                     class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
                     <div class="relative p-4">
                         <img src="./images/blin.png" alt="товар" class="w-full h-44 object-contain mx-auto">
@@ -286,7 +284,7 @@
                             В корзину
                         </button>
                     </div>
-                </div>
+                </div>  -->
 
             </div>
         </div>
@@ -299,9 +297,9 @@
             <a href="#" class="text-green-600 hover:underline">Все новинки</a>
         </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+        <div id="novinke" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
 
-            <div
+            <!-- <div
                 class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
                 <div class="relative">
                     <img src="./images/kombayn.png" alt="product" class="w-full h-44 object-contain mx-auto mt-[25px]">
@@ -415,7 +413,7 @@
                     </button>
                 </div>
 
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -426,9 +424,9 @@
             <a href="#" class="text-green-600 hover:underline">Все новинки</a>
         </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+        <div id="pokupale" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
 
-            <div
+            <!-- <div
                 class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
                 <div class="relative">
                     <img src="./images/desna.png" alt="product" class="w-full h-44 object-contain mx-auto mt-[25px]">
@@ -542,7 +540,7 @@
                     </button>
                 </div>
 
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -691,6 +689,10 @@
   </div>
 </footer>
 
+<script src="./products-data.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/novinke.js"></script>
+<script src="./js/pokupale.js"></script>
  <script>
         lucide.createIcons();
 
@@ -705,7 +707,7 @@
         catalogToggle?.addEventListener('click', () => {
             catalogMenu.classList.toggle('hidden');
         });
-    </script>
+ </script>
 </body>
 
-</html>
+</html> 

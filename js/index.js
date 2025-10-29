@@ -1,0 +1,46 @@
+let aktsi = document.getElementById("aktsi")
+let sliceAksiProduct = products.slice(products.length -36, products.length -32)
+sliceAksiProduct.map((el) =>{
+    aktsi.innerHTML += `
+    <div
+                    class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
+                    <div class="relative p-4">
+                        <img src="${el.images[0]}" alt="товар" class="w-full h-44 object-contain mx-auto">
+                        <span
+                            class="absolute left-4 bottom-4 bg-red-500 text-white text-xs px-2 py-0.5 rounded-md font-semibold">50%</span>
+                        <img src="./images/heard.png" alt="heart"
+                            class="absolute top-4 right-4 w-5 h-5 opacity-80 hover:opacity-100 cursor-pointer transition">
+                    </div>
+
+                    <div class="flex flex-col px-4 pb-4 flex-grow">
+
+                        <div class="mb-3 flex justify-between">
+                            <div>
+                                <p class="text-lg font-semibold text-gray-900 leading-none">44,50 ₽</p>
+                                <p class="text-xs text-gray-400 mb-2">С картой</p>
+                            </div>
+
+                            <div>
+                                <p class="text-lg font-semibold text-gray-400 leading-none">${el.price} ₽</p>
+                                <p class="text-xs text-gray-400">Обычная</p>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-700 text-sm font-medium leading-tight mb-3">${el.name}</p>
+
+                        <div class="flex gap-1 mb-3">
+                            <img src="./images/star.png" alt="star" class="w-4 h-4">
+                            <img src="./images/star.png" alt="star" class="w-4 h-4">
+                            <img src="./images/star (1).png" alt="star" class="w-4 h-4">
+                            <img src="./images/star (1).png" alt="star" class="w-4 h-4 opacity-40">
+                            <img src="./images/star (1).png" alt="star" class="w-4 h-4 opacity-40">
+                        </div>
+
+                        <button
+                            class="mt-auto border border-green-600 text-green-600 font-semibold rounded-lg py-2 w-full transition-all duration-300 hover:bg-orange-500 hover:border-orange-500 hover:text-white">
+                            В корзину
+                        </button>
+                    </div>
+                </div>`
+})
+

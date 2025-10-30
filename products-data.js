@@ -19,7 +19,7 @@ const products = [
     name: "Banana",
     category: "Fruit",
     description:
-      "A long, curved fruit with a yellow skin and sweet, creamy white flesh.",
+      "A long, curved fruit with a yellow skin and sweet.",
     price: 71,
     rating: 5,
     discount: 20,
@@ -35,7 +35,7 @@ const products = [
     name: "Bread",
     category: "Bakery",
     description:
-      "A staple food made from flour, water, and yeast, baked into a loaf.",
+      "A staple food made from flour, water, and yeast, baked.",
     price: 88,
     rating: 5,
     discount: 20,
@@ -147,7 +147,7 @@ const products = [
     name: "Egg",
     category: "Dairy",
     description:
-      "A oval-shaped reproductive body produced by birds, often used as a source of protein in meals.",
+      "A oval-shaped reproductive body produced by birds, often used as a source of protein in.",
     price: 79,
     rating: 4.5,
     discount: 0,

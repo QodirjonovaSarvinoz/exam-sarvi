@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+
+            <div class="flex items-center space-x-3">
+
+                <button id="menuToggle" class="lg:hidden p-2 rounded-md border hover:bg-gray-100">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+
+                <div class="flex items-center space-x-2">
+                    <a href="./index.html"><img src="../images/Group (2).png" alt="logo" class="w-8 h-8"></a>
+                    <a href="./index.html"><span class="font-bold text-lg text-gray-800">Северяночка</span></a>
+                </div>
+
+                <button id="catalogToggle"
+                    class="hidden lg:flex items-center space-x-2 bg-green-100 text-green-700 font-semibold px-4 py-2 rounded-lg hover:bg-green-200 transition">
+                    <i data-lucide="menu" class="w-5 h-5"></i>
+                    <a href="./katalog.html"><span>Каталог</span></a>
+                </button>
+            </div>
+
+            <div class="hidden lg:flex flex-1 mx-6">
+                <input type="text" placeholder="Найти товар"
+                    class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none">
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <button class="hidden lg:flex flex-col items-center text-sm text-gray-600 hover:text-green-600">
+                    <i data-lucide="heart" class="w-5 h-5"></i>
+                    <span>Избранное</span>
+                </button>
+                <button class="hidden lg:flex flex-col items-center text-sm text-gray-600 hover:text-green-600">
+                    <a href="./product.html"><i data-lucide="package" class="w-5 h-5"></i></a>
+                    <a href="./product.html"><span>Продукты</span></a>
+                </button>
+                <button
+                    class="hidden lg:flex flex-col items-center text-sm text-gray-600 hover:text-green-600 relative">
+                    <a href="./korzina.html"><i data-lucide="shopping-cart" class="w-5 h-5"></i></a>
+                    <a href="../korzina.html"><span>Корзина</span></a>
+                    <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1 rounded-full">2</span>
+                </button>
+                <button class="flex items-center space-x-2 hover:bg-gray-100 px-2 py-1 rounded-lg">
+                    <img src="../images/avatar (1).png" alt="user" class="rounded-full w-8 h-8">
+                    <span class="hidden lg:inline text-gray-800 font-medium">Алексей</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="lg:hidden px-4 pb-3">
+            <input type="text" placeholder="Найти товар"
+                class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none">
+        </div>
+
+        <nav id="mobileMenu" class="hidden flex-col bg-white border-t border-gray-200 lg:hidden">
+            <a href="./katalog.html" class="px-6 py-3 hover:bg-gray-100 flex items-center space-x-2">
+                <i data-lucide="menu" class="w-5 h-5"></i><span>Каталог</span>
+            </a>
+            <a href="#" class="px-6 py-3 hover:bg-gray-100 flex items-center space-x-2">
+                <i data-lucide="heart" class="w-5 h-5"></i><span>Избранное</span>
+            </a>
+            <a href="./product.html" class="px-6 py-3 hover:bg-gray-100 flex items-center space-x-2">
+                <i data-lucide="package" class="w-5 h-5"></i><span>Продукты</span>
+            </a>
+            <a href="./korzina.html" class="px-6 py-3 hover:bg-gray-100 flex items-center space-x-2">
+                <i data-lucide="shopping-cart" class="w-5 h-5"></i><span>Корзина</span>
+            </a>
+            <a href="#" class="px-6 py-3 hover:bg-gray-100 flex items-center space-x-2">
+                <i data-lucide="user" class="w-5 h-5"></i><span>Профиль</span>
+            </a>
+        </nav>
+
+        <div id="catalogMenu" class="hidden absolute left-0 w-full bg-white border-t border-gray-200 shadow-lg">
+            <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 p-6 text-gray-700">
+                <a href="./kategoriya.html" class="hover:text-green-600">Молоко, сыр, яйцо</a>
+                <a href="#" class="hover:text-green-600">Хлеб</a>
+                <a href="#" class="hover:text-green-600">Фрукты и овощи</a>
+                <a href="#" class="hover:text-green-600">Замороженные продукты</a>
+                <a href="#" class="hover:text-green-600">Напитки</a>
+                <a href="#" class="hover:text-green-600">Кондитерские изделия</a>
+                <a href="#" class="hover:text-green-600">Чай, кофе</a>
+                <a href="#" class="hover:text-green-600">Бакалея</a>
+                <a href="#" class="hover:text-green-600">Здоровое питание</a>
+                <a href="#" class="hover:text-green-600">Зоотовары</a>
+                <a href="#" class="hover:text-green-600">Непродовольственные товары</a>
+                <a href="#" class="hover:text-green-600">Детское питание</a>
+                <a href="#" class="hover:text-green-600">Мясо, птица, колбаса</a>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="bg-[#faf8f4] py-10">
+        <div class="max-w-[1200px] mx-auto px-4 py-3">
+  <div class="flex flex-wrap items-center gap-2 sm:gap-3 text-[13px] text-gray-700">
+
+  
+    <div class="flex items-center gap-1 sm:gap-2">
+      <a href="../index.html" class="whitespace-nowrap hover:underline">Главная</a>
+      <svg width="7" height="13" viewBox="0 0 7 13" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M0.146447 0.146447C0.341709 -0.0488155 0.658291 -0.0488155 0.853553 0.146447L6.85355 6.14645C7.04882 6.34171 7.04882 6.65829 6.85355 6.85355L0.853553 12.8536C0.658291 13.0488 0.341709 13.0488 0.146447 12.8536C-0.0488155 12.6583 -0.0488155 12.3417 0.146447 12.1464L5.79289 6.5L0.146447 0.853553C-0.0488155 0.658291 -0.0488155 0.341709 0.146447 0.146447Z"
+          fill="#606060" />
+      </svg>
+    </div>
+
+    <div class="flex items-center gap-1 sm:gap-2">
+      <a href="./katalog.html" class="hover:underline">Каталог</a>
+      <svg width="7" height="13" viewBox="0 0 7 13" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M0.146447 0.146447C0.341709 -0.0488155 0.658291 -0.0488155 0.853553 0.146447L6.85355 6.14645C7.04882 6.34171 7.04882 6.65829 6.85355 6.85355L0.853553 12.8536C0.658291 13.0488 0.341709 13.0488 0.146447 12.8536C-0.0488155 12.6583 -0.0488155 12.3417 0.146447 12.1464L5.79289 6.5L0.146447 0.853553C-0.0488155 0.658291 -0.0488155 0.341709 0.146447 0.146447Z"
+          fill="#606060" />
+      </svg>
+    </div>
+
+
+    <div class="flex items-center gap-1 sm:gap-2">
+      <a href="./kategoriya.html" class="whitespace-nowrap hover:underline">Молоко, сыр, яйцо</a>
+      <svg class="hidden sm:block" width="7" height="13" viewBox="0 0 7 13" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M0.146447 0.146447C0.341709 -0.0488155 0.658291 -0.0488155 0.853553 0.146447L6.85355 6.14645C7.04882 6.34171 7.04882 6.65829 6.85355 6.85355L0.853553 12.8536C0.658291 13.0488 0.341709 13.0488 0.146447 12.8536C-0.0488155 12.6583 -0.0488155 12.3417 0.146447 12.1464L5.79289 6.5L0.146447 0.853553C-0.0488155 0.658291 -0.0488155 0.341709 0.146447 0.146447Z"
+          fill="#606060" />
+      </svg>
+    </div>
+
+   
+    <div class="hidden lg:flex items-center gap-2">
+      <a href="./tovar.html" class="text-[#8F8F8F] text-[12px] hover:underline">
+        Масло ПРОСТОКВАШИНО сливочное в/с 82% фольга без змж, Россия, 180 г
+      </a>
+    </div>
+
+  </div>
+
+                <h1 class="text-[20px] font-bold py-[18px] sm:py-[24px] leading-150%">Масло ПРОСТОКВАШИНО сливочное
+                    в/с 82%
+                    фольга без змж, Россия, 180 г</h1>
+            
+            <div class="hidden sm:flex items-center gap-[24px]">
+                <div>
+                    <p class="text-[14px]">арт.371431</p>
+                </div>
+                <div class="flex items-center gap-[8px]">
+                    <div class="flex items-center gap-[2px]">
+                        <img src="./images/star.png" alt="star" class="w-4 h-4" />
+                        <img src="./images/star.png" alt="star" class="w-4 h-4" />
+                        <img src="./images/star (1).png" alt="star" class="w-4 h-4" />
+                        <img src="./images/star (1).png" alt="star" class="w-4 h-4" />
+                        <img src="./images/star (1).png" alt="star" class="w-4 h-4" />
+                    </div>
+                    <p class="text-[14px]">3 отзыва</p>
+                </div>
+                <div class="flex items-center gap-[8px]">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M14.5 5C14.5 3.067 16.067 1.5 18 1.5C19.933 1.5 21.5 3.067 21.5 5C21.5 6.933 19.933 8.5 18 8.5C16.067 8.5 14.5 6.933 14.5 5ZM18 2.5C16.6193 2.5 15.5 3.61929 15.5 5C15.5 6.38071 16.6193 7.5 18 7.5C19.3807 7.5 20.5 6.38071 20.5 5C20.5 3.61929 19.3807 2.5 18 2.5Z"
+                            fill="#414141" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2.5 12C2.5 10.067 4.067 8.5 6 8.5C7.933 8.5 9.5 10.067 9.5 12C9.5 13.933 7.933 15.5 6 15.5C4.067 15.5 2.5 13.933 2.5 12ZM6 9.5C4.61929 9.5 3.5 10.6193 3.5 12C3.5 13.3807 4.61929 14.5 6 14.5C7.38071 14.5 8.5 13.3807 8.5 12C8.5 10.6193 7.38071 9.5 6 9.5Z"
+                            fill="#414141" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M14.5 19C14.5 17.067 16.067 15.5 18 15.5C19.933 15.5 21.5 17.067 21.5 19C21.5 20.933 19.933 22.5 18 22.5C16.067 22.5 14.5 20.933 14.5 19ZM18 16.5C16.6193 16.5 15.5 17.6193 15.5 19C15.5 20.3807 16.6193 21.5 18 21.5C19.3807 21.5 20.5 20.3807 20.5 19C20.5 17.6193 19.3807 16.5 18 16.5Z"
+                            fill="#414141" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M8.15792 13.2583C8.29695 13.0197 8.60307 12.939 8.84166 13.078L15.6717 17.058C15.9103 17.197 15.991 17.5031 15.8519 17.7417C15.7129 17.9803 15.4068 18.061 15.1682 17.922L8.33819 13.942C8.0996 13.803 8.01889 13.4969 8.15792 13.2583Z"
+                            fill="#414141" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M15.8418 6.25799C15.981 6.49649 15.9004 6.80266 15.6619 6.94184L8.84194 10.9218C8.60344 11.061 8.29727 10.9805 8.15808 10.742C8.0189 10.5035 8.09941 10.1973 8.33791 10.0582L15.1579 6.07816C15.3964 5.93897 15.7026 6.01948 15.8418 6.25799Z"
+                            fill="#414141" />
+                    </svg>
+                    <p class="text-[12px]">Поделиться</p>
+                </div>
+                <div class="flex items-center gap-[8px]">
+                    <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M11.6577 1.75827C12.783 0.632497 14.3095 0 15.9013 0C17.493 0 19.0195 0.632466 20.1448 1.75819C21.2705 2.88347 21.9031 4.41012 21.9031 6.00183C21.9031 7.59357 21.2706 9.12009 20.1448 10.2454C20.1448 10.2454 20.1449 10.2454 20.1448 10.2454L11.3048 19.0854C11.1096 19.2806 10.793 19.2806 10.5977 19.0854L1.75774 10.2454C-0.585912 7.90173 -0.585912 4.10192 1.75774 1.75827C4.10139 -0.585378 7.90119 -0.585378 10.2448 1.75827L10.9513 2.46472L11.6577 1.75827C11.6578 1.75824 11.6577 1.7583 11.6577 1.75827ZM15.9013 1C14.5748 1 13.3027 1.52711 12.3649 2.4653L11.3048 3.52538C11.2111 3.61915 11.0839 3.67183 10.9513 3.67183C10.8187 3.67183 10.6915 3.61915 10.5977 3.52538L9.53774 2.46538C7.58461 0.512254 4.41797 0.512254 2.46484 2.46538C0.511719 4.4185 0.511719 7.58515 2.46484 9.53827L10.9513 18.0247L19.4377 9.53827C20.3759 8.60052 20.9031 7.32831 20.9031 6.00183C20.9031 4.67534 20.376 3.40321 19.4378 2.46546C18.5001 1.52727 17.2278 1 15.9013 1Z"
+                            fill="#414141" />
+                    </svg>
+                    <p class="text-[12px]">В избраное</p>
+                </div>
+            </div>
+
+
+            <div class="pt-[0px] sm:pt-[16px] flex flex-col gap-[30px] md:grid grid-cols-2">
+                <div class="grid grid-cols-1 sm:flex items-center gap-[16px] max-w-[684px] w-full">
+                    <div class="hidden sm:flex flex flex-col gap-[40px]">
+                        <div class="cursor-pointer group">
+                            <img class="duration-600" src="./tovar-img/Item (1).png" alt="item">
+                        </div>
+                        <div class="cursor-pointer group">
+                            <img class="duration-400" src="./tovar-img/Item (1).png" alt="item">
+                        </div>
+                        <div class="cursor-pointer group">
+                            <img class="duration-400" src="./tovar-img/Item (1).png" alt="item">
+                        </div>
+                        <div class="cursor-pointer group">
+                            <img class="duration-400" src="./tovar-img/Item (1).png" alt="item">
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img class="w-full sm:w-auto h-[250px] sm:h-auto" src="./tovar-img/Item (2).png"
+                            alt="item">
+                    </div>
+                    <div
+                        class="flex sm:hidden items-center justify-between gap-[12px]  whitespace-nowrap">
+                        <div class="cursor-pointer group max-w-[90px]  w-full">
+                            <img class="hover:scale-110 duration-400 w-full" src="./tovar-img/Item (1).png"
+                                alt="item">
+                        </div>
+                        <div class="cursor-pointer group max-w-[90px]  w-full">
+                            <img class="hover:scale-110 duration-400 w-full" src="./tovar-img/Item (1).png"
+                                alt="item">
+                        </div>
+                        <div class="cursor-pointer group max-w-[90px]  w-full">
+                            <img class="hover:scale-110 duration-400 w-full" src="./tovar-img/Item (1).png"
+                                alt="item">
+                        </div>
+                        <div class="cursor-pointer group max-w-[90px]  w-full">
+                            <img class="hover:scale-110 duration-400 w-full" src="./tovar-img/Item (1).png"
+                                alt="item">
+                        </div>
+
+                    </div>
+                    <div class="flex sm:hidden items-center gap-[20px]">
+                        <div>
+                            <p class="text-[12px]">арт. 371431</p>
+                        </div>
+                        <div class="flex items-center gap-[8px]">
+                            <svg width="90" height="14" viewBox="0 0 96 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.10326 1.81698C7.47008 1.07374 8.52992 1.07374 8.89674 1.81699L10.1185 4.29249C10.2641 4.58763 10.5457 4.7922 10.8714 4.83953L13.6033 5.2365C14.4235 5.35568 14.751 6.36365 14.1575 6.94219L12.1807 8.8691C11.945 9.09884 11.8375 9.42984 11.8931 9.75423L12.3598 12.4751C12.4999 13.292 11.6424 13.9149 10.9088 13.5293L8.46534 12.2446C8.17402 12.0915 7.82598 12.0915 7.53466 12.2446L5.09119 13.5293C4.35756 13.9149 3.50013 13.292 3.64024 12.4751L4.1069 9.75423C4.16254 9.42984 4.05499 9.09884 3.81931 8.8691L1.8425 6.94219C1.24898 6.36365 1.57649 5.35568 2.39671 5.2365L5.12859 4.83953C5.4543 4.7922 5.73587 4.58763 5.88153 4.29249L7.10326 1.81698Z"
+                                    fill="#FF6633" />
+                                <path
+                                    d="M27.1033 1.81698C27.4701 1.07374 28.5299 1.07374 28.8967 1.81699L30.1185 4.29249C30.2641 4.58763 30.5457 4.7922 30.8714 4.83953L33.6033 5.2365C34.4235 5.35568 34.751 6.36365 34.1575 6.94219L32.1807 8.8691C31.945 9.09884 31.8375 9.42984 31.8931 9.75423L32.3598 12.4751C32.4999 13.292 31.6424 13.9149 30.9088 13.5293L28.4653 12.2446C28.174 12.0915 27.826 12.0915 27.5347 12.2446L25.0912 13.5293C24.3576 13.9149 23.5001 13.292 23.6402 12.4751L24.1069 9.75423C24.1625 9.42984 24.055 9.09884 23.8193 8.8691L21.8425 6.94219C21.249 6.36365 21.5765 5.35568 22.3967 5.2365L25.1286 4.83953C25.4543 4.7922 25.7359 4.58763 25.8815 4.29249L27.1033 1.81698Z"
+                                    fill="#FF6633" />
+                                <path
+                                    d="M47.1033 1.81698C47.4701 1.07374 48.5299 1.07374 48.8967 1.81699L50.1185 4.29249C50.2641 4.58763 50.5457 4.7922 50.8714 4.83953L53.6033 5.2365C54.4235 5.35568 54.751 6.36365 54.1575 6.94219L52.1807 8.8691C51.945 9.09884 51.8375 9.42984 51.8931 9.75423L52.3598 12.4751C52.4999 13.292 51.6424 13.9149 50.9088 13.5293L48.4653 12.2446C48.174 12.0915 47.826 12.0915 47.5347 12.2446L45.0912 13.5293C44.3576 13.9149 43.5001 13.292 43.6402 12.4751L44.1069 9.75423C44.1625 9.42984 44.055 9.09884 43.8193 8.8691L41.8425 6.94219C41.249 6.36365 41.5765 5.35568 42.3967 5.2365L45.1286 4.83953C45.4543 4.7922 45.7359 4.58763 45.8815 4.29249L47.1033 1.81698Z"
+                                    fill="#BFBFBF" />
+                                <path
+                                    d="M67.1033 1.81698C67.4701 1.07374 68.5299 1.07374 68.8967 1.81699L70.1185 4.29249C70.2641 4.58763 70.5457 4.7922 70.8714 4.83953L73.6033 5.2365C74.4235 5.35568 74.751 6.36365 74.1575 6.94219L72.1807 8.8691C71.945 9.09884 71.8375 9.42984 71.8931 9.75423L72.3598 12.4751C72.4999 13.292 71.6424 13.9149 70.9088 13.5293L68.4653 12.2446C68.174 12.0915 67.826 12.0915 67.5347 12.2446L65.0912 13.5293C64.3576 13.9149 63.5001 13.292 63.6402 12.4751L64.1069 9.75423C64.1625 9.42984 64.055 9.09884 63.8193 8.8691L61.8425 6.94219C61.249 6.36365 61.5765 5.35568 62.3967 5.2365L65.1286 4.83953C65.4543 4.7922 65.7359 4.58763 65.8815 4.29249L67.1033 1.81698Z"
+                                    fill="#BFBFBF" />
+                                <path
+                                    d="M87.1033 1.81698C87.4701 1.07374 88.5299 1.07374 88.8967 1.81699L90.1185 4.29249C90.2641 4.58763 90.5457 4.7922 90.8714 4.83953L93.6033 5.2365C94.4235 5.35568 94.751 6.36365 94.1575 6.94219L92.1807 8.8691C91.945 9.09884 91.8375 9.42984 91.8931 9.75423L92.3598 12.4751C92.4999 13.292 91.6424 13.9149 90.9088 13.5293L88.4653 12.2446C88.174 12.0915 87.826 12.0915 87.5347 12.2446L85.0912 13.5293C84.3576 13.9149 83.5001 13.292 83.6402 12.4751L84.1069 9.75423C84.1625 9.42984 84.055 9.09884 83.8193 8.8691L81.8425 6.94219C81.249 6.36365 81.5765 5.35568 82.3967 5.2365L85.1286 4.83953C85.4543 4.7922 85.7359 4.58763 85.8815 4.29249L87.1033 1.81698Z"
+                                    fill="#BFBFBF" />
+                            </svg>
+                            <p class="text-[12px]">3 отзыва</p>
+                        </div>
+                    </div>
+                    <div class="flex sm:hidden items-center gap-[16px]">
+                        <div class="flex items-center gap-[8px]">
+                            <svg width="18" height="18" viewBox="0 0 22 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M11.6577 1.75827C12.783 0.632497 14.3095 0 15.9013 0C17.493 0 19.0195 0.632466 20.1448 1.75819C21.2705 2.88347 21.9031 4.41012 21.9031 6.00183C21.9031 7.59357 21.2706 9.12009 20.1448 10.2454C20.1448 10.2454 20.1449 10.2454 20.1448 10.2454L11.3048 19.0854C11.1096 19.2806 10.793 19.2806 10.5977 19.0854L1.75774 10.2454C-0.585912 7.90173 -0.585912 4.10192 1.75774 1.75827C4.10139 -0.585378 7.90119 -0.585378 10.2448 1.75827L10.9513 2.46472L11.6577 1.75827C11.6578 1.75824 11.6577 1.7583 11.6577 1.75827ZM15.9013 1C14.5748 1 13.3027 1.52711 12.3649 2.4653L11.3048 3.52538C11.2111 3.61915 11.0839 3.67183 10.9513 3.67183C10.8187 3.67183 10.6915 3.61915 10.5977 3.52538L9.53774 2.46538C7.58461 0.512254 4.41797 0.512254 2.46484 2.46538C0.511719 4.4185 0.511719 7.58515 2.46484 9.53827L10.9513 18.0247L19.4377 9.53827C20.3759 8.60052 20.9031 7.32831 20.9031 6.00183C20.9031 4.67534 20.376 3.40321 19.4378 2.46546C18.5001 1.52727 17.2278 1 15.9013 1Z"
+                                    fill="#414141" />
+                            </svg>
+                            <p class="text-[12px]">В избраное</p>
+                        </div>
+                        <div class="flex items-center gap-[8px]">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.5 5C14.5 3.067 16.067 1.5 18 1.5C19.933 1.5 21.5 3.067 21.5 5C21.5 6.933 19.933 8.5 18 8.5C16.067 8.5 14.5 6.933 14.5 5ZM18 2.5C16.6193 2.5 15.5 3.61929 15.5 5C15.5 6.38071 16.6193 7.5 18 7.5C19.3807 7.5 20.5 6.38071 20.5 5C20.5 3.61929 19.3807 2.5 18 2.5Z"
+                                    fill="#414141" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M2.5 12C2.5 10.067 4.067 8.5 6 8.5C7.933 8.5 9.5 10.067 9.5 12C9.5 13.933 7.933 15.5 6 15.5C4.067 15.5 2.5 13.933 2.5 12ZM6 9.5C4.61929 9.5 3.5 10.6193 3.5 12C3.5 13.3807 4.61929 14.5 6 14.5C7.38071 14.5 8.5 13.3807 8.5 12C8.5 10.6193 7.38071 9.5 6 9.5Z"
+                                    fill="#414141" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.5 19C14.5 17.067 16.067 15.5 18 15.5C19.933 15.5 21.5 17.067 21.5 19C21.5 20.933 19.933 22.5 18 22.5C16.067 22.5 14.5 20.933 14.5 19ZM18 16.5C16.6193 16.5 15.5 17.6193 15.5 19C15.5 20.3807 16.6193 21.5 18 21.5C19.3807 21.5 20.5 20.3807 20.5 19C20.5 17.6193 19.3807 16.5 18 16.5Z"
+                                    fill="#414141" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M8.15792 13.2583C8.29695 13.0197 8.60307 12.939 8.84166 13.078L15.6717 17.058C15.9103 17.197 15.991 17.5031 15.8519 17.7417C15.7129 17.9803 15.4068 18.061 15.1682 17.922L8.33819 13.942C8.0996 13.803 8.01889 13.4969 8.15792 13.2583Z"
+                                    fill="#414141" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M15.8418 6.25799C15.981 6.49649 15.9004 6.80266 15.6619 6.94184L8.84194 10.9218C8.60344 11.061 8.29727 10.9805 8.15808 10.742C8.0189 10.5035 8.09941 10.1973 8.33791 10.0582L15.1579 6.07816C15.3964 5.93897 15.7026 6.01948 15.8418 6.25799Z"
+                                    fill="#414141" />
+                            </svg>
+                            <p class="text-[12px]">Поделиться</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="max-w-[684px]  w-full py-[0px] md:py-[13px] px-[15px] rounded-[4px]">
+                    <div class="flex items-end justify-between">
+                        <div class="flex flex-col">
+                            <p class="text-[18px] sm:text-[24px]">192,69₽</p>
+                            <p class="text-[10px] text-[12px] text-[#BFBFBF]">Обычная цена</p>
+                        </div>
+                        <div class="flex flex-col gap-[0px]">
+                            <p class="text-[26px] sm:text-[36px] font-bold">108,99₽</p>
+                            <div class="flex items-center gap-[7px]">
+                                <p class="text-[10px] sm:text-[12px] text-[#BFBFBF]">С картой Северяночки</p>
+                                <svg class="w-[17px] sm:w-[20px] h-[17px] sm:h-[20px]" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M1.5 12C1.5 6.20101 6.20101 1.5 12 1.5C17.799 1.5 22.5 6.20101 22.5 12C22.5 17.799 17.799 22.5 12 22.5C6.20101 22.5 1.5 17.799 1.5 12ZM12 2.5C6.75329 2.5 2.5 6.75329 2.5 12C2.5 17.2467 6.75329 21.5 12 21.5C17.2467 21.5 21.5 17.2467 21.5 12C21.5 6.75329 17.2467 2.5 12 2.5Z"
+                                        fill="#414141" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12 11.5C12.2761 11.5 12.5 11.7239 12.5 12V16C12.5 16.2761 12.2761 16.5 12 16.5C11.7239 16.5 11.5 16.2761 11.5 16V12C11.5 11.7239 11.7239 11.5 12 11.5Z"
+                                        fill="#414141" />
+                                    <path
+                                        d="M13 8C13 8.55228 12.5523 9 12 9C11.4477 9 11 8.55228 11 8C11 7.44772 11.4477 7 12 7C12.5523 7 13 7.44772 13 8Z"
+                                        fill="#414141" />
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center pt-[16px]">
+                        <button
+                            class="flex items-center gap-[14px] border border-[#70C05B] max-w-[207px] sm:max-w-[277px] rounded-[4px] 
+                          group hover:bg-[#FF6633] cursor-pointer transition duration-300 w-full py-[9px] justify-center">
+                            <svg class="w-5 sm:w-8 h-5 sm:h-8 fill-[#70C05B] group-hover:fill-white transition duration-300"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M7.33325 28C7.33325 26.1591 8.82564 24.6667 10.6666 24.6667C12.5075 24.6667 13.9999 26.1591 13.9999 28C13.9999 29.841 12.5075 31.3333 10.6666 31.3333C8.82564 31.3333 7.33325 29.841 7.33325 28ZM10.6666 26C9.56202 26 8.66659 26.8954 8.66659 28C8.66659 29.1046 9.56202 30 10.6666 30C11.7712 30 12.6666 29.1046 12.6666 28C12.6666 26.8954 11.7712 26 10.6666 26Z" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M23.3333 28C23.3333 26.1591 24.8256 24.6667 26.6666 24.6667C28.5075 24.6667 29.9999 26.1591 29.9999 28C29.9999 29.841 28.5075 31.3333 26.6666 31.3333C24.8256 31.3333 23.3333 29.841 23.3333 28ZM26.6666 26C25.562 26 24.6666 26.8954 24.6666 28C24.6666 29.1046 25.562 30 26.6666 30C27.7712 30 28.6666 29.1046 28.6666 28C28.6666 26.8954 27.7712 26 26.6666 26Z" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M1.33341 0.666672C0.965225 0.666672 0.666748 0.965149 0.666748 1.33334C0.666748 1.70153 0.965225 2.00001 1.33341 2.00001H6.10743C7.11719 7.72197 8.13785 13.4191 8.99916 19.1611C9.24392 20.7929 10.6456 22 12.2956 22H25.813C27.4019 22 28.77 20.8785 29.0816 19.3204L31.0005 9.72557C31.2481 8.48799 30.3015 7.33334 29.0394 7.33334H9.54737C9.14342 7.33334 8.77071 7.45202 8.45923 7.65458L7.32327 1.21748C7.26705 0.89891 6.99024 0.666672 6.66675 0.666672H1.33341ZM8.88808 9.43223C8.82762 9.02916 9.13979 8.66667 9.54737 8.66667H29.0394C29.4601 8.66667 29.7756 9.05155 29.6931 9.46408L27.7741 19.0589C27.5872 19.9938 26.7663 20.6667 25.813 20.6667H12.2956C11.3056 20.6667 10.4646 19.9424 10.3177 18.9634L8.88808 9.43223Z" />
+                            </svg>
+
+                            <p
+                                class="text-[18px] sm:text-[24px] text-[#70C05B] group-hover:text-white transition duration-300">
+                                В корзину
+                            </p>
+                        </button>
+                    </div>
+                    <div class="pt-[28px] flex flex-col gap-[2px] sm:gap-[10px] pb-[16px]">
+                        <div
+                            class="flex justify-between items-center flex-wrap gap-2 w-full cursor-pointer group duration-200  bg-[#F3F2F1] py-[6px] px-[8px] rounded-[6px]">
+                            <p class="text-[12px]">Бренд</p>
+                            <p class="text-[12px] font-bold">ПРОСТОКВАШИНО</p>
+                        </div>
+                        <div
+                            class="flex justify-between items-center flex-wrap gap-2 w-full cursor-pointer group duration-200 bg-[#F3F2F1] py-[6px] px-[8px] rounded-[6px]">
+                            <p class="text-[12px]">Страна производителя</p>
+                            <p class="text-[12px] font-bold">Россия</p>
+                        </div>
+                        <div
+                            class="flex justify-between items-center flex-wrap gap-2 w-full cursor-pointer group duration-200 bg-[#F3F2F1] py-[6px] px-[8px] rounded-[6px]">
+                            <p class="text-[12px]">Упаковка</p>
+                            <p class="text-[12px] font-bold">180 г</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="py-10">
+        <div class="max-w-[1200px] mx-auto px-4">
+
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold text-gray-800">С этим товаров мокупают</h2>
+                <a href="#" class="text-green-600 font-semibold hover:underline">Все акции</a>
+            </div>
+
+            <div id="aktsi" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+
+                <!-- <div
+                    class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
+                    <div class="relative p-4">
+                        <img src="./images/blin.png" alt="товар" class="w-full h-44 object-contain mx-auto">
+                        <span
+                            class="absolute left-4 bottom-4 bg-red-500 text-white text-xs px-2 py-0.5 rounded-md font-semibold">-50%</span>
+                        <img src="./images/heard.png" alt="heart"
+                            class="absolute top-4 right-4 w-5 h-5 opacity-80 hover:opacity-100 cursor-pointer transition">
+                    </div>
+
+                    <div class="flex flex-col px-4 pb-4 flex-grow">
+
+                        <div class="mb-3 flex justify-between">
+                            <div>
+                                <p class="text-lg font-semibold text-gray-900 leading-none">44,50 ₽</p>
+                                <p class="text-xs text-gray-400 mb-2">С картой</p>
+                            </div>
+
+                            <div>
+                                <p class="text-lg font-semibold text-gray-400 leading-none">50,50 ₽</p>
+                                <p class="text-xs text-gray-400">Обычная</p>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-700 text-sm font-medium leading-tight mb-3">Г/Ц Блинчики с мясом вес,<br>
+                            Россия</p>
+
+                        <div class="flex gap-1 mb-3">
+                            <img src="./images/star.png" alt="star" class="w-4 h-4">
+                            <img src="./images/star.png" alt="star" class="w-4 h-4">
+                            <img src="./images/star (1).png" alt="star" class="w-4 h-4">
+                            <img src="./images/star (1).png" alt="star" class="w-4 h-4 opacity-40">
+                            <img src="./images/star (1).png" alt="star" class="w-4 h-4 opacity-40">
+                        </div>
+
+                        <button
+                            class="mt-auto border border-green-600 text-green-600 font-semibold rounded-lg py-2 w-full transition-all duration-300 hover:bg-orange-500 hover:border-orange-500 hover:text-white">
+                            В корзину
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
+                    <div class="relative p-4">
+                        <img src="./images/malako.png" alt="товар" class="w-full h-44 object-contain mx-auto">
+                        <span
+                            class="absolute left-4 bottom-4 bg-red-500 text-white text-xs px-2 py-0.5 rounded-md font-semibold">-50%</span>
+                        <img src="./images/heard.png" alt="heart"
+                            class="absolute top-4 right-4 w-5 h-5 opacity-80 hover:opacity-100 cursor-pointer transition">
+                    </div>
+
+                    <div class="flex flex-col px-4 pb-4 flex-grow">
+                        <div class="mb-3 flex justify-between">
+                            <div>
+                                <p class="text-lg font-semibold text-gray-900 leading-none">44,50 ₽</p>
+                                <p class="text-xs text-gray-400 mb-2">С картой</p>
+                            </div>
+
+                            <div>
+                                <p class="text-lg font-semibold text-gray-400 leading-none">50,50 ₽</p>
+                                <p class="text-xs text-gray-400">Обычная</p>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-700 text-sm font-medium leading-tight mb-3">Молоко ПРОСТОКВАШИНО пасть. <br>
+                            питьевое цельное отборное...</p>
+
+                        <div class="flex gap-1 mb-3">
+                            <img src="./images/star.png" alt="star" class="w-4 h-4">
+                            <img src="./images/star.png" alt="star" class="w-4 h-4">
+                            <img src="./images/star.png" alt="star" class="w-4 h-4">
+                            <img src="./images/star (1).png" alt="star" class="w-4 h-4 opacity-40">
+                            <img src="./images/star (1).png" alt="star" class="w-4 h-4 opacity-40">
+                        </div>
+
+                        <button
+                            class="mt-auto border border-green-600 text-green-600 font-semibold rounded-lg py-2 w-full transition-all duration-300 hover:bg-orange-500 hover:border-orange-500 hover:text-white">
+                            В корзину
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
+                    <div class="relative p-4">
+                        <img src="./images/sos.png" alt="товар" class="w-full h-44 object-contain mx-auto">
+                        <span
+                            class="absolute left-4 bottom-4 bg-red-500 text-white text-xs px-2 py-0.5 rounded-md font-semibold">-50%</span>
+                        <img src="./images/heard.png" alt="heart"
+                            class="absolute top-4 right-4 w-5 h-5 opacity-80 hover:opacity-100 cursor-pointer transition">
+                    </div>
+
+                    <div class="flex flex-col px-4 pb-4 flex-grow">
+                        <div class="mb-3 flex justify-between">
+                            <div>
+                                <p class="text-lg font-semibold text-gray-900 leading-none">44,50 ₽</p>
+                                <p class="text-xs text-gray-400 mb-2">С картой</p>
+                            </div>
+
+                            <div>
+                                <p class="text-lg font-semibold text-gray-400 leading-none">50,50 ₽</p>
+                                <p class="text-xs text-gray-400">Обычная</p>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-700 text-sm font-medium leading-tight mb-3">Колбаса сырокопченая МЯСНАЯ
+                            ИСТОРИЯ Сальчичон и Тоскан...</p>
+
+                        <div class="flex gap-1 mb-3">
+                            <img src="./images/star.png" alt="star" class="w-4 h-4">
+                            <img src="./images/star.png" alt="star" class="w-4 h-4">
+                            <img src="./images/star.png" alt="star" class="w-4 h-4">
+                            <img src="./images/star.png" alt="star" class="w-4 h-4 opacity-40">
+                            <img src="./images/star.png" alt="star" class="w-4 h-4 opacity-40">
+                        </div>
+
+                        <button
+                            class="mt-auto border border-green-600 text-green-600 font-semibold rounded-lg py-2 w-full transition-all duration-300 hover:bg-orange-500 hover:border-orange-500 hover:text-white">
+                            В корзину
+                        </button>
+                    </div>
+                </div>
+
+
+                <div
+                    class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
+                    <div class="relative p-4">
+                        <img src="./images/kolbasa.png" alt="товар" class="w-full h-44 object-contain mx-auto">
+                        <span
+                            class="absolute left-4 bottom-4 bg-red-500 text-white text-xs px-2 py-0.5 rounded-md font-semibold">-50%</span>
+                        <img src="./images/heard.png" alt="heart"
+                            class="absolute top-4 right-4 w-5 h-5 opacity-80 hover:opacity-100 cursor-pointer transition">
+                    </div>
+
+                    <div class="flex flex-col px-4 pb-4 flex-grow">
+                        <div class="mb-3 flex justify-between">
+                            <div>
+                                <p class="text-lg font-semibold text-gray-900 leading-none">44,50 ₽</p>
+                                <p class="text-xs text-gray-400 mb-2">С картой</p>
+                            </div>
+
+                            <div>
+                                <p class="text-lg font-semibold text-gray-400 leading-none">50,50 ₽</p>
+                                <p class="text-xs text-gray-400">Обычная</p>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-700 text-sm font-medium leading-tight mb-3">Сосиски вареные МЯСНАЯ ИСТОРИЯ
+                            Молочные и С сыро...</p>
+
+                        <div class="flex gap-1 mb-3">
+                            <img src="./images/star.png" alt="star" class="w-4 h-4">
+                            <img src="./images/star.png" alt="star" class="w-4 h-4">
+                            <img src="./images/star.png" alt="star" class="w-4 h-4">
+                            <img src="./images/star.png" alt="star" class="w-4 h-4 opacity-40">
+                            <img src="./images/star (2).png" alt="star" class="w-4 h-4 opacity-40">
+                        </div>
+
+                        <button
+                            class="mt-auto border border-green-600 text-green-600 font-semibold rounded-lg py-2 w-full transition-all duration-300 hover:bg-orange-500 hover:border-orange-500 hover:text-white">
+                            В корзину
+                        </button>
+                    </div>
+                </div>  -->
+
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-[1200px] mx-auto px-4 py-10">
+
+        <div class=" flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-bold text-gray-900">Акции</h2>
+            <a href="#" class="text-green-600 hover:underline">Все новинки</a>
+        </div>
+
+        <div id="novinke" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+
+            <!-- <div
+                class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
+                <div class="relative">
+                    <img src="./images/kombayn.png" alt="product" class="w-full h-44 object-contain mx-auto mt-[25px]">
+                    <img src="./images/heard.png" alt="heart" class="absolute top-3 right-3 w-6 h-6 cursor-pointer">
+                </div>
+
+                <div class="p-4 flex flex-col gap-2">
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-lg font-semibold text-gray-900 pb-[20px]">599,99 ₽</span>
+
+                    </div>
+                    <h3 class="text-base font-semibold text-gray-900 leading-tight">Комбайн КЗС-1218 <br> «ДЕСНА-ПОЛЕСЬЕ
+                        GS12»</h3>
+                    <div class="flex items-center gap-1">
+                        <img src="./images/star.png" class="w-4 h-4" alt="">
+                        <img src="./images/star.png" class="w-4 h-4" alt="">
+                        <img src="./images/star (1).png" class="w-4 h-4" alt="">
+                        <img src="./images/star (1).png" class="w-4 h-4" alt="">
+                        <img src="./images/star (1).png" class="w-4 h-4" alt="">
+                    </div>
+                    <button
+                        class="mt-auto border border-green-600 text-green-600 font-semibold rounded-lg py-2 w-full transition-all duration-300 hover:bg-orange-500 hover:border-orange-500 hover:text-white">
+                        В корзину
+                    </button>
+                </div>
+
+            </div>
+
+            <div
+                class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
+                <div class="relative">
+                    <img src="./images/kolbasa.png" alt="product" class="w-full h-44 object-contain mx-auto mt-[25px]">
+                    <img src="./images/heard.png" alt="heart" class="absolute top-3 right-3 w-6 h-6 cursor-pointer">
+                </div>
+
+                <div class="p-4 flex flex-col gap-2">
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-lg font-semibold text-gray-900 pb-[20px]">44,50 ₽</span>
+
+                    </div>
+                    <h3 class="text-base font-semibold text-gray-900 leading-tight">Колбаса МЯСНАЯ <br> ИСТОРИЯ и
+                        Тоскан...</h3>
+                    <div class="flex items-center gap-1">
+                        <img src="./images/star.png" class="w-4 h-4" alt="">
+                        <img src="./images/star.png" class="w-4 h-4" alt="">
+                        <img src="./images/star.png" class="w-4 h-4" alt="">
+                        <img src="./images/star.png" class="w-4 h-4" alt="">
+                        <img src="./images/star.png" class="w-4 h-4" alt="">
+                    </div>
+                    <button
+                        class="mt-auto border border-green-600 text-green-600 font-semibold rounded-lg py-2 w-full transition-all duration-300 hover:bg-orange-500 hover:border-orange-500 hover:text-white">
+                        В корзину
+                    </button>
+                </div>
+
+            </div>
+
+            <div
+                class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
+                <div class="relative">
+                    <img src="./images/sos.png" alt="product" class="w-full h-44 object-contain mx-auto mt-[25px]">
+                    <img src="./images/heard.png" alt="heart" class="absolute top-3 right-3 w-6 h-6 cursor-pointer">
+                </div>
+
+                <div class="p-4 flex flex-col gap-2">
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-lg font-semibold text-gray-900 pb-[20px]">159,99 ₽</span>
+
+                    </div>
+                    <h3 class="text-base font-semibold text-gray-900 leading-tight">Комбайн КЗС-1218 <br> «ДЕСНА-ПОЛЕСЬЕ
+                        GS12»</h3>
+                    <div class="flex items-center gap-1">
+                        <img src="./images/star.png" class="w-4 h-4" alt="">
+                        <img src="./images/star.png" class="w-4 h-4" alt="">
+                        <img src="./images/star (1).png" class="w-4 h-4" alt="">
+                        <img src="./images/star (1).png" class="w-4 h-4" alt="">
+                        <img src="./images/star (1).png" class="w-4 h-4" alt="">
+                    </div>
+                    <button
+                        class="mt-auto border border-green-600 text-green-600 font-semibold rounded-lg py-2 w-full transition-all duration-300 hover:bg-orange-500 hover:border-orange-500 hover:text-white">
+                        В корзину
+                    </button>
+                </div>
+
+            </div>
+
+            <div
+                class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
+                <div class="relative">
+                    <img src="./images/malako.png" alt="product" class="w-full h-44 object-contain mx-auto mt-[25px]">
+                    <img src="./images/heard.png" alt="heart" class="absolute top-3 right-3 w-6 h-6 cursor-pointer">
+                </div>
+
+                <div class="p-4 flex flex-col gap-2">
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-lg font-semibold text-gray-900 pb-[20px]">49,39 ₽</span>
+
+                    </div>
+                    <h3 class="text-base font-semibold text-gray-900 leading-tight">Комбайн КЗС-1218 <br> «ДЕСНА-ПОЛЕСЬЕ
+                        GS12»</h3>
+                    <div class="flex items-center gap-1">
+                        <img src="./images/star.png" class="w-4 h-4" alt="">
+                        <img src="./images/star.png" class="w-4 h-4" alt="">
+                        <img src="./images/star (1).png" class="w-4 h-4" alt="">
+                        <img src="./images/star (1).png" class="w-4 h-4" alt="">
+                        <img src="./images/star (1).png" class="w-4 h-4" alt="">
+                    </div>
+                    <button
+                        class="mt-auto border border-green-600 text-green-600 font-semibold rounded-lg py-2 w-full transition-all duration-300 hover:bg-orange-500 hover:border-orange-500 hover:text-white">
+                        В корзину
+                    </button>
+                </div>
+
+            </div> -->
+        </div>
+    </section>
+    <footer class="bg-[#fff9f0] border-t border-gray-200 mt-10 bg-cover bg-center"
+        style="background-image: url('./images/footer-bg.png');">
+        <div class="max-w-[1200px] mx-auto px-4 py-10">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+
+                <div class="flex items-center gap-3">
+                    <img src="./images/Group (2).png" alt="Logo" class="w-14 h-14 object-contain">
+                </div>
+
+                <ul
+                    class="flex flex-col sm:flex-row flex-wrap justify-center md:justify-center gap-4 sm:gap-6 text-gray-700 text-sm font-medium text-center">
+                    <li><a href="#" class="hover:text-black transition">О компании</a></li>
+                    <li><a href="#" class="hover:text-black transition">Контакты</a></li>
+                    <li><a href="#" class="hover:text-black transition">Вакансии</a></li>
+                    <li><a href="#" class="hover:text-black transition">Соглашение</a></li>
+                    <li><a href="#" class="hover:text-black transition">Политика обработки персональных данных</a></li>
+                </ul>
+
+                <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+                    <div class="flex items-center gap-4 text-gray-700">
+                        <i data-lucide="facebook" class="w-5 h-5 hover:text-black transition"></i>
+                        <i data-lucide="instagram" class="w-5 h-5 hover:text-black transition"></i>
+                        <i data-lucide="youtube" class="w-5 h-5 hover:text-black transition"></i>
+                        <i data-lucide="twitter" class="w-5 h-5 hover:text-black transition"></i>
+                    </div>
+                    <p class="font-semibold text-gray-900 text-base">8 800 777 33 33</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="./products-data.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/novinke.js"></script>
+    <script src="./js/pokupale.js"></script>
+    <script>
+        lucide.createIcons();
+
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const catalogToggle = document.getElementById('catalogToggle');
+        const catalogMenu = document.getElementById('catalogMenu');
+        catalogToggle?.addEventListener('click', () => {
+            catalogMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

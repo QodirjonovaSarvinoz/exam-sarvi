@@ -102,6 +102,7 @@
 
 
       <main class="bg-[#f8f6e9] py-10">
+      
   <div class="max-w-7xl mx-auto px-4 lg:px-8 flex flex-col xl:flex-row gap-8">
 
     <aside class="xl:w-[250px] w-full grid grid-cols-1">
@@ -140,9 +141,10 @@
     </aside>
 
     <section class="flex-1">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+      <div id="kategoriya" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <article class="relative bg-white rounded-xl border border-gray-100 shadow-sm p-4 flex flex-col">
+         <!-- <article class="relative bg-white rounded-xl border border-gray-100 shadow-sm p-4 flex flex-col">
           <img src="./images/heard.png" alt="heart" class="absolute top-3 right-3 w-6 h-6" />
 
           <div class="flex items-center justify-center h-36 mb-3">
@@ -289,14 +291,14 @@
           >
             В корзину
           </button>
-        </article>
+        </article>  -->
 
       </div>
 
       <div class="mt-10 flex justify-center">
-        <button class="px-6 py-2 rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200 transition">
+        <a href="./tovar.html"><button class="px-6 py-2 rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200 transition">
           Показать ещё
-        </button>
+        </button></a>
       </div>
     </section>
   </div>
@@ -333,6 +335,8 @@
             </div>
         </div>
     </footer>
+    <script src="./products-data.js"></script>
+    <script src="./js/kategoriya.js"></script>
     <script src="./products-data.js"></script>
     <script src="./js/main.js"></script>
     <script>

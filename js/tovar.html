@@ -1,10 +1,10 @@
-let aktsi = document.getElementById("aktsi")
-let sliceAksiProduct = products.slice(products.length -36, products.length -32)
-sliceAksiProduct.map((el) =>{
-    aktsi.innerHTML += `
+let tovar= document.getElementById("tovar")
+let sliceTovarProduct = products.slice(products.length -36, products.length -32)
+sliceTovarProduct.map((el) =>{
+    tovar.innerHTML += `
     <div
                     class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
-                    <div class="relative mb-4">
+                    <div class="relative">
                         <img src="${el.images[0]}" alt="товар" class="w-full h-[140px] sm:h-[202px] rounded-2xl">
                         <span
                             class="absolute left-4 bottom-4 bg-red-500 text-white text-xs px-2 py-0.5 rounded-md font-semibold">50%</span>
@@ -16,12 +16,12 @@ sliceAksiProduct.map((el) =>{
 
                         <div class="mb-3 flex justify-between">
                             <div>
-                                <p class="text-lg font-semibold text-gray-900 leading-none">44,50 ₽</p>
+                                <p class="text-lg font-semibold text-gray-900 leading-none mt-5">44,50 ₽</p>
                                 <p class="text-xs text-gray-400 mb-2">С картой</p>
                             </div>
 
                             <div>
-                                <p class="text-lg font-semibold text-gray-400 leading-none">${el.price} ₽</p>
+                                <p class="text-lg font-semibold text-gray-400 leading-none mt-5">${el.price} ₽</p>
                                 <p class="text-xs text-gray-400">Обычная</p>
                             </div>
                         </div>

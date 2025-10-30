@@ -15,7 +15,8 @@ sliceNovinkeProduct.map((el) =>{
                         <span class="text-lg font-semibold text-gray-900 pb-[20px]">${el.price} ₽</span>
 
                     </div>
-                    <h3 class="text-base font-semibold text-gray-900 leading-tight">${el.name}</h3>
+                    <div> <h4 class="font-semibold text-black-100 pb-[10px]">${el.name}</h4> </div>
+                    <h3 class="text-base font-semibold text-gray-900 leading-tight">${el.description}</h3>
                     <div class="flex items-center gap-1">
                         <img src="./images/star.png" class="w-4 h-4" alt="">
                         <img src="./images/star.png" class="w-4 h-4" alt="">
@@ -23,10 +24,10 @@ sliceNovinkeProduct.map((el) =>{
                         <img src="./images/star (1).png" class="w-4 h-4" alt="">
                         <img src="./images/star (1).png" class="w-4 h-4" alt="">
                     </div>
-                    <button
-                        class="mt-auto border border-green-600 text-green-600 font-semibold rounded-lg py-2 w-full transition-all duration-300 hover:bg-orange-500 hover:border-orange-500 hover:text-white">
-                        В корзину
-                    </button>
+                    <a href="./korzina.html"><button
+                            class="mt-auto border border-green-600 text-green-600 font-semibold rounded-lg py-2 w-full transition-all duration-300 hover:bg-orange-500 hover:border-orange-500 hover:text-white">
+                            В корзину
+                        </button></a>
                 </div>
 
             </div>`

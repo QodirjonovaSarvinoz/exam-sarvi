@@ -51,7 +51,7 @@ const products = [
     name: "Broccoli",
     category: "Vegetable",
     description:
-      "A green vegetable with a tree-like appearance, known for its high nutrient content.",
+      "A green vegetable with a tree-like appearance.",
     price: 94,
     rating: 4.5,
     discount: 20,

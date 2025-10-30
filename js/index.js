@@ -25,8 +25,8 @@ sliceAksiProduct.map((el) =>{
                                 <p class="text-xs text-gray-400">Обычная</p>
                             </div>
                         </div>
-
-                        <p class="text-gray-700 text-sm font-medium leading-tight mb-3">${el.name}</p>
+                        <div> <h4 class="font-semibold text-black-100 pb-[10px]">${el.name}</h4> </div>
+                        <p class="text-gray-700 text-sm font-medium leading-tight mb-3">${el.description}</p>
 
                         <div class="flex gap-1 mb-3">
                             <img src="./images/star.png" alt="star" class="w-4 h-4">
@@ -36,10 +36,10 @@ sliceAksiProduct.map((el) =>{
                             <img src="./images/star (1).png" alt="star" class="w-4 h-4 opacity-40">
                         </div>
 
-                        <button
+                       <a href="./korzina.html"><button
                             class="mt-auto border border-green-600 text-green-600 font-semibold rounded-lg py-2 w-full transition-all duration-300 hover:bg-orange-500 hover:border-orange-500 hover:text-white">
                             В корзину
-                        </button>
+                        </button></a>
                     </div>
                 </div>`
 })

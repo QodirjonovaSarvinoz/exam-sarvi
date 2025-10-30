@@ -4,8 +4,8 @@ sliceAksiProduct.map((el) =>{
     aktsi.innerHTML += `
     <div
                     class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
-                    <div class="relative p-4">
-                        <img src="${el.images[0]}" alt="товар" class="w-full h-44 object-contain mx-auto">
+                    <div class="relative">
+                        <img src="${el.images[0]}" alt="товар" class="w-full h-[140px] sm:h-[202px] rounded-2xl">
                         <span
                             class="absolute left-4 bottom-4 bg-red-500 text-white text-xs px-2 py-0.5 rounded-md font-semibold">50%</span>
                         <img src="./images/heard.png" alt="heart"

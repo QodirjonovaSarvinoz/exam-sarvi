@@ -5,7 +5,7 @@ slicePokupaleProduct.map((el) =>{
     <div
                 class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
                 <div class="relative">
-                    <img src="${el.images[0]}" alt="product" class="w-full h-44 object-contain mx-auto mt-[25px]">
+                    <img src="${el.images[0]}" alt="product" class="w-full h-[140px] sm:h-[202px] rounded-2xl">
                     <img src="./images/heard.png" alt="heart" class="absolute top-3 right-3 w-6 h-6 cursor-pointer">
                 </div>
 

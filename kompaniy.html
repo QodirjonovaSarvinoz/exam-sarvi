@@ -1,15 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-
-<body>
+<body class="bg-[#FBF8EC] pb-16 sm:pb-0">
     <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
         <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
 
@@ -99,165 +97,80 @@
             </div>
         </div>
     </header>
-   <main class="bg-[#fff9f0]">
-          
-    <section class="max-w-[1200px] mx-auto px-4 py-10">
-        <div class="flex items-center justify-between mb-6">
-            <h2 class="text-2xl font-bold text-gray-900">Все продукты</h2>
-            <a href="#" class="text-green-600 hover:underline">Все новинки</a>
+
+   
+    <div class="max-w-7xl mx-auto mt-25 px-4">
+        <div class="flex items-center text-gray-700 text-md">
+            <a href="./index.html" class="hover:text-gray-900 transition duration-500">Главная</a>
+            <span class="mx-4 text-gray-700 text-lg"> › </span>
+            <span class="text-gray-700">О компании</span>
         </div>
+    </div>
 
-        <div id="cards1" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
-
-            <!-- <div
-                class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
-                <div class="relative">
-                    <img src="./images/kombayn.png" alt="product" class="w-full h-44 object-contain mx-auto mt-[25px]">
-                    <img src="./images/heard.png" alt="heart" class="absolute top-3 right-3 w-6 h-6 cursor-pointer">
-                </div>
-
-                <div class="p-4 flex flex-col gap-2">
-                    <div class="flex items-baseline gap-2">
-                        <span class="text-lg font-semibold text-gray-900 pb-[20px]">599,99 ₽</span>
-
-                    </div>
-                    <h3 class="text-base font-semibold text-gray-900 leading-tight">Комбайн КЗС-1218 <br> «ДЕСНА-ПОЛЕСЬЕ
-                        GS12»</h3>
-                    <div class="flex items-center gap-1">
-                        <img src="./images/star.png" class="w-4 h-4" alt="">
-                        <img src="./images/star.png" class="w-4 h-4" alt="">
-                        <img src="./images/star (1).png" class="w-4 h-4" alt="">
-                        <img src="./images/star (1).png" class="w-4 h-4" alt="">
-                        <img src="./images/star (1).png" class="w-4 h-4" alt="">
-                    </div>
-                    <button
-                        class="mt-auto border border-green-600 text-green-600 font-semibold rounded-lg py-2 w-full transition-all duration-300 hover:bg-orange-500 hover:border-orange-500 hover:text-white">
-                        В корзину
-                    </button>
-                </div>
-
-            </div> -->
-
-            <!-- <div
-                class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
-                <div class="relative">
-                    <img src="./images/kolbasa.png" alt="product" class="w-full h-44 object-contain mx-auto mt-[25px]">
-                    <img src="./images/heard.png" alt="heart" class="absolute top-3 right-3 w-6 h-6 cursor-pointer">
-                </div>
-
-                <div class="p-4 flex flex-col gap-2">
-                    <div class="flex items-baseline gap-2">
-                        <span class="text-lg font-semibold text-gray-900 pb-[20px]">44,50 ₽</span>
-
-                    </div>
-                    <h3 class="text-base font-semibold text-gray-900 leading-tight">Колбаса МЯСНАЯ <br> ИСТОРИЯ и
-                        Тоскан...</h3>
-                    <div class="flex items-center gap-1">
-                        <img src="./images/star.png" class="w-4 h-4" alt="">
-                        <img src="./images/star.png" class="w-4 h-4" alt="">
-                        <img src="./images/star.png" class="w-4 h-4" alt="">
-                        <img src="./images/star.png" class="w-4 h-4" alt="">
-                        <img src="./images/star.png" class="w-4 h-4" alt="">
-                    </div>
-                    <button
-                        class="mt-auto border border-green-600 text-green-600 font-semibold rounded-lg py-2 w-full transition-all duration-300 hover:bg-orange-500 hover:border-orange-500 hover:text-white">
-                        В корзину
-                    </button>
-                </div>
-
+    <section class="max-w-7xl mx-auto py-10 px-4 md:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 mb-20 items-center">
+            <div>
+                <h1 class="text-[36px] md:text-[48px] lg:text-[64px] font-bold text-[#414141] mb-4">О компании</h1>
+                <p class="text-[14px] md:text-[18px] lg:text-[24px] font-bold text-[#FF6633]">Мы непрерывно развиваемся и <br> работаем над совершенствованием сервиса, <br> заботимся о наших клиентах, <br> стремимся к лучшему будущему.</p>
             </div>
 
-            <div
-                class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
-                <div class="relative">
-                    <img src="./images/sos.png" alt="product" class="w-full h-44 object-contain mx-auto mt-[25px]">
-                    <img src="./images/heard.png" alt="heart" class="absolute top-3 right-3 w-6 h-6 cursor-pointer">
+            <div class="flex justify-center">
+                <div class="bg-[#E5FFDE] rounded-[60px] w-full max-w-3xl flex items-center justify-center ">
+                    <img src="./kompaniyimage/kompaniy.png" alt="" class="w-full h-full object-contain rounded-[40px]">
                 </div>
+            </div>
+        </div>
 
-                <div class="p-4 flex flex-col gap-2">
-                    <div class="flex items-baseline gap-2">
-                        <span class="text-lg font-semibold text-gray-900 pb-[20px]">159,99 ₽</span>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-8 text-left">
 
+            <div>
+                <div class="flex justify-start gap-2">
+                    <div class="flex flex-shrink-0 items-start">
+                        <img src="./kompaniyimage/check.png" alt="check" class="w-8 h-8">
                     </div>
-                    <h3 class="text-base font-semibold text-gray-900 leading-tight">Комбайн КЗС-1218 <br> «ДЕСНА-ПОЛЕСЬЕ
-                        GS12»</h3>
-                    <div class="flex items-center gap-1">
-                        <img src="./images/star.png" class="w-4 h-4" alt="">
-                        <img src="./images/star.png" class="w-4 h-4" alt="">
-                        <img src="./images/star (1).png" class="w-4 h-4" alt="">
-                        <img src="./images/star (1).png" class="w-4 h-4" alt="">
-                        <img src="./images/star (1).png" class="w-4 h-4" alt="">
+                    <div>
+                        <span class="text-[14px] lg:text-[20px] text-[#414141]">Мы занимаемся розничной торговлей</span>
+                        <p class="text-[14px] md:text-[18px] lg:text-[24px] text-[#414141] font-bold">Более 20 лет.</p>
                     </div>
-                    <button
-                        class="mt-auto border border-green-600 text-green-600 font-semibold rounded-lg py-2 w-full transition-all duration-300 hover:bg-orange-500 hover:border-orange-500 hover:text-white">
-                        В корзину
-                    </button>
                 </div>
-
             </div>
 
-            <div
-                class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
-                <div class="relative">
-                    <img src="./images/malako.png" alt="product" class="w-full h-44 object-contain mx-auto mt-[25px]">
-                    <img src="./images/heard.png" alt="heart" class="absolute top-3 right-3 w-6 h-6 cursor-pointer">
-                </div>
-
-                <div class="p-4 flex flex-col gap-2">
-                    <div class="flex items-baseline gap-2">
-                        <span class="text-lg font-semibold text-gray-900 pb-[20px]">49,39 ₽</span>
-
+            <div>
+                <div class="flex justify-start gap-2">
+                    <div class="flex flex-shrink-0 items-start">
+                        <img src="./kompaniyimage/check.png" alt="check" class="w-8 h-8">
                     </div>
-                    <h3 class="text-base font-semibold text-gray-900 leading-tight">Комбайн КЗС-1218 <br> «ДЕСНА-ПОЛЕСЬЕ
-                        GS12»</h3>
-                    <div class="flex items-center gap-1">
-                        <img src="./images/star.png" class="w-4 h-4" alt="">
-                        <img src="./images/star.png" class="w-4 h-4" alt="">
-                        <img src="./images/star (1).png" class="w-4 h-4" alt="">
-                        <img src="./images/star (1).png" class="w-4 h-4" alt="">
-                        <img src="./images/star (1).png" class="w-4 h-4" alt="">
+                    <div>
+                        <span class="text-[14px] lg:text-[20px] text-[#414141]">Основная миссия компании</span>
+                        <p class="text-[14px] md:text-[18px] lg:text-[24px] text-[#414141] font-bold">Максимальное качество товаров и услуг по доступной цене.</p>
                     </div>
-                    <button
-                        class="mt-auto border border-green-600 text-green-600 font-semibold rounded-lg py-2 w-full transition-all duration-300 hover:bg-orange-500 hover:border-orange-500 hover:text-white">
-                        В корзину
-                    </button>
                 </div>
+            </div>
 
-            </div> -->
+            <div>
+                <div class="flex justify-start gap-2">
+                    <div class="flex flex-shrink-0 items-start">
+                        <img src="./kompaniyimage/check.png" alt="check" class="w-8 h-8 object-contain">
+                    </div>
+                    <div>
+                        <span class="text-[14px] lg:text-[20px] text-[#414141]">Отличительная черта нашей сети</span>
+                        <p class="text-[14px] md:text-[18px] lg:text-[24px] text-[#414141] font-bold">Здоровая и полезная продукция местного производства внаших магазинах.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 mt-20">
+            <div class="flex-shrink-0">
+                <img src="./kompaniyimage/logo (2).png" alt="logo" class="w-20 h-20 object-contain">
+            </div>
+
+            <div class="relative bg-[#E5FFDE] text-[#70C05B] p-6 px-6 rounded-2xl flex items-center justify-center max-w-full md:max-w-3xl">
+                <p class="text-sm sm:text-base font-bold text-center break-words">Спасибо, что выбрали нас! Мы всегда рады видеть вас снова</p>
+                <div class="absolute left-[-12px] top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-b-[10px] border-r-[12px] border-t-transparent border-b-transparent border-r-[#E5FFDE]"></div>
+            </div>
         </div>
     </section>
-
-    <section class="max-w-[1200px] mx-auto px-4 py-10">
-
-
-        <div id="cards" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
-
-
-        </div>
-    </section>
-
-    <section>
-        <div class="flex justify-center mt-8 pb-8">
-  <div class="flex flex-wrap items-center gap-5 px-4 py-2 ">
-
-    <span class="cursor-pointer text-black"><<</span>
-    <span class="cursor-pointer text-black"><</span>
-
-    <span class="cursor-pointer text-black hover:text-orange-500 px-2 py-1 rounded text-sm sm:text-base">1</span>
-    <span class="cursor-pointer text-black hover:text-orange-500 px-2 py-1 rounded text-sm sm:text-base">2</span>
-    <span class="cursor-pointer text-black hover:text-orange-500 px-2 py-1 rounded text-sm sm:text-base">3</span>
-    <span class="cursor-pointer text-black hover:text-orange-500 px-2 py-1 rounded text-sm sm:text-base hidden sm:inline">4</span>
-    <span class="cursor-pointer text-black hover:text-orange-500 px-2 py-1 rounded text-sm sm:text-base hidden sm:inline">5</span>
-    <span class="cursor-pointer text-black hover:text-orange-500 px-2 py-1 rounded text-sm sm:text-base hidden md:inline">6</span>
-    <span class="cursor-pointer text-black hover:text-orange-500 px-2 py-1 rounded text-sm sm:text-base hidden lg:inline">7</span>
-    <span class="cursor-pointer text-black hover:text-orange-500 px-2 py-1 rounded text-sm sm:text-base hidden xl:inline">8</span>
-    <span class="cursor-pointer text-black">></span>
-    <span class="cursor-pointer text-black">>></span>
-  </div>
-</div>
-    </section>     
-
-     </main>
 
     <footer class="bg-[#fff9f0] border-t border-gray-200 bg-cover bg-center"
         style="background-image: url('./images/footer-bg.png');">
@@ -311,5 +224,3 @@
 
 
 </html>
-
-

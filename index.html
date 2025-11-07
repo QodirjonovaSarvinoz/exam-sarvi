@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,7 +11,6 @@
 </head>
 
 <body class="bg-[#faf8f4]">
-
     <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
         <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
 
@@ -39,9 +38,13 @@
             </div>
 
             <div class="flex items-center space-x-4">
-                <button class="hidden lg:flex flex-col items-center text-sm text-gray-600 hover:text-green-600">
+                <button
+                    class="hidden lg:flex flex-col items-center text-sm text-gray-600 hover:text-green-600 relative">
                     <a href="./izobrannoy.html"><i data-lucide="heart" class="w-5 h-5"></i></a>
                     <a href="./izobrannoy.html"><span>Избранное</span></a>
+
+                    <span id="likeBadge"
+                        class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1 rounded-full">0</span>
                 </button>
                 <button class="hidden lg:flex flex-col items-center text-sm text-gray-600 hover:text-green-600">
                     <a href="./product.html"><i data-lucide="package" class="w-5 h-5"></i></a>
@@ -51,7 +54,8 @@
                     class="hidden lg:flex flex-col items-center text-sm text-gray-600 hover:text-green-600 relative">
                     <a href="./korzina.html"><i data-lucide="shopping-cart" class="w-5 h-5"></i></a>
                     <a href="./korzina.html"><span>Корзина</span></a>
-                    <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1 rounded-full">2</span>
+                    <span id="badge"
+                        class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1 rounded-full">0</span>
                 </button>
                 <button class="flex items-center space-x-2 hover:bg-gray-100 px-2 py-1 rounded-lg">
                     <img src="./images/avatar (1).png" alt="user" class="rounded-full w-8 h-8">
@@ -292,6 +296,7 @@
                 </div>  -->
 
             </div>
+
         </div>
     </section>
 
@@ -431,7 +436,7 @@
 
         <div id="pokupale" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
 
-             <!-- <div
+            <!-- <div
                 class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
                 <div class="relative">
                     <img src="./images/desna.png" alt="product" class="w-full h-44 object-contain mx-auto mt-[25px]">
@@ -555,7 +560,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                 <div class="flex flex-col lg:flex-row items-center bg-orange-100 p-6 rounded-xl shadow-md">
-                     <div class="flex-1">
+                    <div class="flex-1">
                         <h3 class="text-lg font-semibold mb-2">Оформите карту «Северяночка»</h3>
                         <p class="text-gray-700">И получайте бонусы при покупке в магазинах и на сайте</p>
                     </div>
@@ -572,7 +577,7 @@
                     <div class="mt-4 lg:mt-0 lg:ml-4 flex-shrink-0">
                         <img src="./images/card2.png" alt="">
                     </div>
-                </div> 
+                </div>
 
             </div>
         </div>
@@ -663,42 +668,48 @@
 
         </div>
     </section>
- 
-   <footer class="bg-[#fff9f0] border-t border-gray-200 mt-10 bg-cover bg-center" style="background-image: url('./images/footer-bg.png');">
-  <div class="max-w-[1200px] mx-auto px-4 py-10">
-    <div class="flex flex-col md:flex-row justify-between items-center">
 
-      <div class="flex items-center gap-3">
-        <img src="./images/Group (2).png" alt="Logo" class="w-14 h-14 object-contain">
-      </div>
+    <footer class="bg-[#fff9f0] border-t border-gray-200 mt-10 bg-cover bg-center"
+        style="background-image: url('./images/footer-bg.png');">
+        <div class="max-w-[1200px] mx-auto px-4 py-10">
+            <div class="flex flex-col md:flex-row justify-between items-center">
 
-      <ul class="flex flex-col sm:flex-row flex-wrap justify-center md:justify-center gap-4 sm:gap-6 text-gray-700 text-sm font-medium text-center">
-        <li><a href="./kompaniy.html" class="hover:text-black transition">О компании</a></li>
-        <li><a href="./kontakt.html" class="hover:text-black transition">Контакты</a></li>
-        <li><a href="./vakansiya.html" class="hover:text-black transition">Вакансии</a></li>
-        <li><a href="#" class="hover:text-black transition">Соглашение</a></li>
-        <li><a href="#" class="hover:text-black transition">Политика обработки персональных данных</a></li>
-      </ul>
+                <div class="flex items-center gap-3">
+                    <img src="./images/Group (2).png" alt="Logo" class="w-14 h-14 object-contain">
+                </div>
 
-      <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
-        <div class="flex items-center gap-4 text-gray-700">
-          <i data-lucide="facebook" class="w-5 h-5 hover:text-black transition"></i>
-          <i data-lucide="instagram" class="w-5 h-5 hover:text-black transition"></i>
-          <i data-lucide="youtube" class="w-5 h-5 hover:text-black transition"></i>
-          <i data-lucide="twitter" class="w-5 h-5 hover:text-black transition"></i>
+                <ul
+                    class="flex flex-col sm:flex-row flex-wrap justify-center md:justify-center gap-4 sm:gap-6 text-gray-700 text-sm font-medium text-center">
+                    <li><a href="./kompaniy.html" class="hover:text-black transition">О компании</a></li>
+                    <li><a href="./kontakt.html" class="hover:text-black transition">Контакты</a></li>
+                    <li><a href="./vakansiya.html" class="hover:text-black transition">Вакансии</a></li>
+                    <li><a href="#" class="hover:text-black transition">Соглашение</a></li>
+                    <li><a href="#" class="hover:text-black transition">Политика обработки персональных данных</a></li>
+                </ul>
+
+                <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+                    <div class="flex items-center gap-4 text-gray-700">
+                        <i data-lucide="facebook" class="w-5 h-5 hover:text-black transition"></i>
+                        <i data-lucide="instagram" class="w-5 h-5 hover:text-black transition"></i>
+                        <i data-lucide="youtube" class="w-5 h-5 hover:text-black transition"></i>
+                        <i data-lucide="twitter" class="w-5 h-5 hover:text-black transition"></i>
+                    </div>
+                    <p class="font-semibold text-gray-900 text-base">8 800 777 33 33</p>
+                </div>
+
+            </div>
         </div>
-        <p class="font-semibold text-gray-900 text-base">8 800 777 33 33</p>
-      </div>
+    </footer>
 
-    </div>
-  </div>
-</footer>
+    <script src="./products-data.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/novinke.js"></script>
+    <script src="./js/nayti.js"></script>
+    <script src="./js/pokupale.js"></script>
+    <script src="./js/lizobrannoy.js"></script>
 
-<script src="./products-data.js"></script>
-<script src="./js/index.js"></script>
-<script src="./js/novinke.js"></script>
-<script src="./js/pokupale.js"></script>
- <script>
+
+    <script>
         lucide.createIcons();
 
         const menuToggle = document.getElementById('menuToggle');
@@ -712,8 +723,8 @@
         catalogToggle?.addEventListener('click', () => {
             catalogMenu.classList.toggle('hidden');
         });
- </script>
+    </script>
 
 </body>
 
-</html> 
+</html>

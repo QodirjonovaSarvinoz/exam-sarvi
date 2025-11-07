@@ -44,3 +44,39 @@ sliceTovarProduct.map((el) =>{
                 </div>`
 })
 
+const searchInput = document.querySelector('input[placeholder="Найти товар"]');
+const kategoriyaContainer = document.getElementById('kategoriya'); 
+
+function showProducts(arr) {
+  kategoriyaContainer.innerHTML = ""; 
+  if (arr.length === 0) {
+    kategoriyaContainer.innerHTML = "<p class='text-center text-gray-500 py-10'>Товары не найдены 😢</p>";
+    return;
+  }
+
+  arr.forEach(product => {
+    kategoriyaContainer.innerHTML += 
+      <article class="relative bg-white rounded-xl border border-gray-100 shadow-sm p-4 flex flex-col">
+        <div class="flex items-center justify-center h-36 mb-3">
+          <img src="${product.images[0]}" alt="${product.name}" class="h-full object-contain" />
+        </div>
+        <p class="text-[17px] font-semibold text-gray-900 leading-none mb-1">${product.price} ₽</p>
+        <p class="text-sm text-gray-600 mb-2">${product.name}</p>
+        <button
+          class="mt-auto w-full border border-green-400 text-green-700 text-sm py-2 rounded-md hover:bg-green-600 hover:text-white transition">
+          В корзину
+        </button>
+      </article>
+    ;
+  });
+}
+
+showProducts(products);
+
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.toLowerCase();
+  const filteredProducts = products.filter(product =>
+    product.name.toLowerCase().includes(query)
+  );
+  showProducts(filteredProducts);
+});

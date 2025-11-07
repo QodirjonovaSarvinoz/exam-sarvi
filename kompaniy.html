@@ -1,12 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body class="bg-[#FBF8EC] pb-16 sm:pb-0">
     <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
         <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
@@ -35,9 +36,12 @@
             </div>
 
             <div class="flex items-center space-x-4">
-                <button class="hidden lg:flex flex-col items-center text-sm text-gray-600 hover:text-green-600">
-                    <i data-lucide="heart" class="w-5 h-5"></i>
+                <button
+                    class="hidden lg:flex flex-col items-center text-sm text-gray-600 hover:text-green-600 relative">
+                    <a href="./izobrannoy.html"><i data-lucide="heart" class="w-5 h-5"></i></a>
                     <a href="./izobrannoy.html"><span>Избранное</span></a>
+                    <span id="likeBadge"
+                        class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1 rounded-full">0</span>
                 </button>
                 <button class="hidden lg:flex flex-col items-center text-sm text-gray-600 hover:text-green-600">
                     <a href="./product.html"><i data-lucide="package" class="w-5 h-5"></i></a>
@@ -81,7 +85,7 @@
 
         <div id="catalogMenu" class="hidden absolute left-0 w-full bg-white border-t border-gray-200 shadow-lg">
             <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 p-6 text-gray-700">
-               <a href="./kategoriya.html" class="hover:text-green-600">Молоко, сыр, яйцо</a>
+                <a href="./kategoriya.html" class="hover:text-green-600">Молоко, сыр, яйцо</a>
                 <a href="#" class="hover:text-green-600">Хлеб</a>
                 <a href="#" class="hover:text-green-600">Фрукты и овощи</a>
                 <a href="#" class="hover:text-green-600">Замороженные продукты</a>
@@ -98,7 +102,7 @@
         </div>
     </header>
 
-   
+
     <div class="max-w-7xl mx-auto mt-25 px-4">
         <div class="flex items-center text-gray-700 text-md">
             <a href="./index.html" class="hover:text-gray-900 transition duration-500">Главная</a>
@@ -111,7 +115,9 @@
         <div class="grid lg:grid-cols-2 mb-20 items-center">
             <div>
                 <h1 class="text-[36px] md:text-[48px] lg:text-[64px] font-bold text-[#414141] mb-4">О компании</h1>
-                <p class="text-[14px] md:text-[18px] lg:text-[24px] font-bold text-[#FF6633]">Мы непрерывно развиваемся и <br> работаем над совершенствованием сервиса, <br> заботимся о наших клиентах, <br> стремимся к лучшему будущему.</p>
+                <p class="text-[14px] md:text-[18px] lg:text-[24px] font-bold text-[#FF6633]">Мы непрерывно развиваемся
+                    и <br> работаем над совершенствованием сервиса, <br> заботимся о наших клиентах, <br> стремимся к
+                    лучшему будущему.</p>
             </div>
 
             <div class="flex justify-center">
@@ -142,7 +148,8 @@
                     </div>
                     <div>
                         <span class="text-[14px] lg:text-[20px] text-[#414141]">Основная миссия компании</span>
-                        <p class="text-[14px] md:text-[18px] lg:text-[24px] text-[#414141] font-bold">Максимальное качество товаров и услуг по доступной цене.</p>
+                        <p class="text-[14px] md:text-[18px] lg:text-[24px] text-[#414141] font-bold">Максимальное
+                            качество товаров и услуг по доступной цене.</p>
                     </div>
                 </div>
             </div>
@@ -154,7 +161,8 @@
                     </div>
                     <div>
                         <span class="text-[14px] lg:text-[20px] text-[#414141]">Отличительная черта нашей сети</span>
-                        <p class="text-[14px] md:text-[18px] lg:text-[24px] text-[#414141] font-bold">Здоровая и полезная продукция местного производства внаших магазинах.</p>
+                        <p class="text-[14px] md:text-[18px] lg:text-[24px] text-[#414141] font-bold">Здоровая и
+                            полезная продукция местного производства внаших магазинах.</p>
                     </div>
                 </div>
             </div>
@@ -165,9 +173,13 @@
                 <img src="./kompaniyimage/logo (2).png" alt="logo" class="w-20 h-20 object-contain">
             </div>
 
-            <div class="relative bg-[#E5FFDE] text-[#70C05B] p-6 px-6 rounded-2xl flex items-center justify-center max-w-full md:max-w-3xl">
-                <p class="text-sm sm:text-base font-bold text-center break-words">Спасибо, что выбрали нас! Мы всегда рады видеть вас снова</p>
-                <div class="absolute left-[-12px] top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-b-[10px] border-r-[12px] border-t-transparent border-b-transparent border-r-[#E5FFDE]"></div>
+            <div
+                class="relative bg-[#E5FFDE] text-[#70C05B] p-6 px-6 rounded-2xl flex items-center justify-center max-w-full md:max-w-3xl">
+                <p class="text-sm sm:text-base font-bold text-center break-words">Спасибо, что выбрали нас! Мы всегда
+                    рады видеть вас снова</p>
+                <div
+                    class="absolute left-[-12px] top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-b-[10px] border-r-[12px] border-t-transparent border-b-transparent border-r-[#E5FFDE]">
+                </div>
             </div>
         </div>
     </section>

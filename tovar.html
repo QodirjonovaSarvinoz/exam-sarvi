@@ -37,9 +37,12 @@
             </div>
 
             <div class="flex items-center space-x-4">
-                <button class="hidden lg:flex flex-col items-center text-sm text-gray-600 hover:text-green-600">
+                <button
+                    class="hidden lg:flex flex-col items-center text-sm text-gray-600 hover:text-green-600 relative">
                     <a href="./izobrannoy.html"><i data-lucide="heart" class="w-5 h-5"></i></a>
                     <a href="./izobrannoy.html"><span>Избранное</span></a>
+                    <span id="likeBadge"
+                        class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1 rounded-full">0</span>
                 </button>
                 <button class="hidden lg:flex flex-col items-center text-sm text-gray-600 hover:text-green-600">
                     <a href="./product.html"><i data-lucide="package" class="w-5 h-5"></i></a>
@@ -103,53 +106,51 @@
 
     <section class="bg-[#faf8f4] py-10">
         <div class="max-w-[1200px] mx-auto px-4 py-3">
-  <div class="flex flex-wrap items-center gap-2 sm:gap-3 text-[13px] text-gray-700">
-
-  
-    <div class="flex items-center gap-1 sm:gap-2">
-      <a href="../index.html" class="whitespace-nowrap hover:underline">Главная</a>
-      <svg width="7" height="13" viewBox="0 0 7 13" fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd"
-          d="M0.146447 0.146447C0.341709 -0.0488155 0.658291 -0.0488155 0.853553 0.146447L6.85355 6.14645C7.04882 6.34171 7.04882 6.65829 6.85355 6.85355L0.853553 12.8536C0.658291 13.0488 0.341709 13.0488 0.146447 12.8536C-0.0488155 12.6583 -0.0488155 12.3417 0.146447 12.1464L5.79289 6.5L0.146447 0.853553C-0.0488155 0.658291 -0.0488155 0.341709 0.146447 0.146447Z"
-          fill="#606060" />
-      </svg>
-    </div>
-
-    <div class="flex items-center gap-1 sm:gap-2">
-      <a href="./katalog.html" class="hover:underline">Каталог</a>
-      <svg width="7" height="13" viewBox="0 0 7 13" fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd"
-          d="M0.146447 0.146447C0.341709 -0.0488155 0.658291 -0.0488155 0.853553 0.146447L6.85355 6.14645C7.04882 6.34171 7.04882 6.65829 6.85355 6.85355L0.853553 12.8536C0.658291 13.0488 0.341709 13.0488 0.146447 12.8536C-0.0488155 12.6583 -0.0488155 12.3417 0.146447 12.1464L5.79289 6.5L0.146447 0.853553C-0.0488155 0.658291 -0.0488155 0.341709 0.146447 0.146447Z"
-          fill="#606060" />
-      </svg>
-    </div>
+            <div class="flex flex-wrap items-center gap-2 sm:gap-3 text-[13px] text-gray-700">
 
 
-    <div class="flex items-center gap-1 sm:gap-2">
-      <a href="./kategoriya.html" class="whitespace-nowrap hover:underline">Молоко, сыр, яйцо</a>
-      <svg class="hidden sm:block" width="7" height="13" viewBox="0 0 7 13" fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd"
-          d="M0.146447 0.146447C0.341709 -0.0488155 0.658291 -0.0488155 0.853553 0.146447L6.85355 6.14645C7.04882 6.34171 7.04882 6.65829 6.85355 6.85355L0.853553 12.8536C0.658291 13.0488 0.341709 13.0488 0.146447 12.8536C-0.0488155 12.6583 -0.0488155 12.3417 0.146447 12.1464L5.79289 6.5L0.146447 0.853553C-0.0488155 0.658291 -0.0488155 0.341709 0.146447 0.146447Z"
-          fill="#606060" />
-      </svg>
-    </div>
+                <div class="flex items-center gap-1 sm:gap-2">
+                    <a href="../index.html" class="whitespace-nowrap hover:underline">Главная</a>
+                    <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0.146447 0.146447C0.341709 -0.0488155 0.658291 -0.0488155 0.853553 0.146447L6.85355 6.14645C7.04882 6.34171 7.04882 6.65829 6.85355 6.85355L0.853553 12.8536C0.658291 13.0488 0.341709 13.0488 0.146447 12.8536C-0.0488155 12.6583 -0.0488155 12.3417 0.146447 12.1464L5.79289 6.5L0.146447 0.853553C-0.0488155 0.658291 -0.0488155 0.341709 0.146447 0.146447Z"
+                            fill="#606060" />
+                    </svg>
+                </div>
 
-   
-    <div class="hidden lg:flex items-center gap-2">
-      <a href="./tovar.html" class="text-[#8F8F8F] text-[12px] hover:underline">
-        Масло ПРОСТОКВАШИНО сливочное в/с 82% фольга без змж, Россия, 180 г
-      </a>
-    </div>
+                <div class="flex items-center gap-1 sm:gap-2">
+                    <a href="./katalog.html" class="hover:underline">Каталог</a>
+                    <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0.146447 0.146447C0.341709 -0.0488155 0.658291 -0.0488155 0.853553 0.146447L6.85355 6.14645C7.04882 6.34171 7.04882 6.65829 6.85355 6.85355L0.853553 12.8536C0.658291 13.0488 0.341709 13.0488 0.146447 12.8536C-0.0488155 12.6583 -0.0488155 12.3417 0.146447 12.1464L5.79289 6.5L0.146447 0.853553C-0.0488155 0.658291 -0.0488155 0.341709 0.146447 0.146447Z"
+                            fill="#606060" />
+                    </svg>
+                </div>
 
-  </div>
 
-                <h1 class="text-[20px] font-bold py-[18px] sm:py-[24px] leading-150%">Масло ПРОСТОКВАШИНО сливочное
-                    в/с 82%
-                    фольга без змж, Россия, 180 г</h1>
-            
+                <div class="flex items-center gap-1 sm:gap-2">
+                    <a href="./kategoriya.html" class="whitespace-nowrap hover:underline">Молоко, сыр, яйцо</a>
+                    <svg class="hidden sm:block" width="7" height="13" viewBox="0 0 7 13" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0.146447 0.146447C0.341709 -0.0488155 0.658291 -0.0488155 0.853553 0.146447L6.85355 6.14645C7.04882 6.34171 7.04882 6.65829 6.85355 6.85355L0.853553 12.8536C0.658291 13.0488 0.341709 13.0488 0.146447 12.8536C-0.0488155 12.6583 -0.0488155 12.3417 0.146447 12.1464L5.79289 6.5L0.146447 0.853553C-0.0488155 0.658291 -0.0488155 0.341709 0.146447 0.146447Z"
+                            fill="#606060" />
+                    </svg>
+                </div>
+
+
+                <div class="hidden lg:flex items-center gap-2">
+                    <a href="./tovar.html" class="text-[#8F8F8F] text-[12px] hover:underline">
+                        Масло ПРОСТОКВАШИНО сливочное в/с 82% фольга без змж, Россия, 180 г
+                    </a>
+                </div>
+
+            </div>
+
+            <h1 class="text-[20px] font-bold py-[18px] sm:py-[24px] leading-150%">Масло ПРОСТОКВАШИНО сливочное
+                в/с 82%
+                фольга без змж, Россия, 180 г</h1>
+
             <div class="hidden sm:flex items-center gap-[24px]">
                 <div>
                     <p class="text-[14px]">арт.371431</p>
@@ -212,26 +213,20 @@
                         </div>
                     </div>
                     <div class="relative">
-                        <img class="w-full sm:w-auto h-[250px] sm:h-auto" src="./tovar-img/Item (2).png"
-                            alt="item">
+                        <img class="w-full sm:w-auto h-[250px] sm:h-auto" src="./tovar-img/Item (2).png" alt="item">
                     </div>
-                    <div
-                        class="flex sm:hidden items-center justify-between gap-[12px]  whitespace-nowrap">
+                    <div class="flex sm:hidden items-center justify-between gap-[12px]  whitespace-nowrap">
                         <div class="cursor-pointer group max-w-[90px]  w-full">
-                            <img class="hover:scale-110 duration-400 w-full" src="./tovar-img/Item (1).png"
-                                alt="item">
+                            <img class="hover:scale-110 duration-400 w-full" src="./tovar-img/Item (1).png" alt="item">
                         </div>
                         <div class="cursor-pointer group max-w-[90px]  w-full">
-                            <img class="hover:scale-110 duration-400 w-full" src="./tovar-img/Item (1).png"
-                                alt="item">
+                            <img class="hover:scale-110 duration-400 w-full" src="./tovar-img/Item (1).png" alt="item">
                         </div>
                         <div class="cursor-pointer group max-w-[90px]  w-full">
-                            <img class="hover:scale-110 duration-400 w-full" src="./tovar-img/Item (1).png"
-                                alt="item">
+                            <img class="hover:scale-110 duration-400 w-full" src="./tovar-img/Item (1).png" alt="item">
                         </div>
                         <div class="cursor-pointer group max-w-[90px]  w-full">
-                            <img class="hover:scale-110 duration-400 w-full" src="./tovar-img/Item (1).png"
-                                alt="item">
+                            <img class="hover:scale-110 duration-400 w-full" src="./tovar-img/Item (1).png" alt="item">
                         </div>
 
                     </div>
@@ -361,7 +356,7 @@
                 </div>
             </div>
         </div>
-        
+
     </section>
 
     <section class="py-10">

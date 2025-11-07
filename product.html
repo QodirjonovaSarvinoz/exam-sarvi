@@ -37,9 +37,12 @@
             </div>
 
             <div class="flex items-center space-x-4">
-                <button class="hidden lg:flex flex-col items-center text-sm text-gray-600 hover:text-green-600">
-                   <a href="./izobrannoy.html"> <i data-lucide="heart" class="w-5 h-5"></i></a>
+                <button
+                    class="hidden lg:flex flex-col items-center text-sm text-gray-600 hover:text-green-600 relative">
+                    <a href="./izobrannoy.html"><i data-lucide="heart" class="w-5 h-5"></i></a>
                     <a href="./izobrannoy.html"><span>Избранное</span></a>
+                    <span id="likeBadge"
+                        class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1 rounded-full">0</span>
                 </button>
                 <button class="hidden lg:flex flex-col items-center text-sm text-gray-600 hover:text-green-600">
                     <a href="./product.html"><i data-lucide="package" class="w-5 h-5"></i></a>
@@ -83,7 +86,7 @@
 
         <div id="catalogMenu" class="hidden absolute left-0 w-full bg-white border-t border-gray-200 shadow-lg">
             <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 p-6 text-gray-700">
-               <a href="./kategoriya.html" class="hover:text-green-600">Молоко, сыр, яйцо</a>
+                <a href="./kategoriya.html" class="hover:text-green-600">Молоко, сыр, яйцо</a>
                 <a href="#" class="hover:text-green-600">Хлеб</a>
                 <a href="#" class="hover:text-green-600">Фрукты и овощи</a>
                 <a href="#" class="hover:text-green-600">Замороженные продукты</a>
@@ -99,17 +102,17 @@
             </div>
         </div>
     </header>
-   <main class="bg-[#fff9f0]">
-          
-    <section class="max-w-[1200px] mx-auto px-4 py-10">
-        <div class="flex items-center justify-between mb-6">
-            <h2 class="text-2xl font-bold text-gray-900">Все продукты</h2>
-            <a href="#" class="text-green-600 hover:underline">Все новинки</a>
-        </div>
+    <main class="bg-[#fff9f0]">
 
-        <div id="cards1" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+        <section class="max-w-[1200px] mx-auto px-4 py-10">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold text-gray-900">Все продукты</h2>
+                <a href="#" class="text-green-600 hover:underline">Все новинки</a>
+            </div>
 
-            <!-- <div
+            <div id="cards1" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+
+                <!-- <div
                 class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
                 <div class="relative">
                     <img src="./images/kombayn.png" alt="product" class="w-full h-44 object-contain mx-auto mt-[25px]">
@@ -138,7 +141,7 @@
 
             </div> -->
 
-            <!-- <div
+                <!-- <div
                 class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
                 <div class="relative">
                     <img src="./images/kolbasa.png" alt="product" class="w-full h-44 object-contain mx-auto mt-[25px]">
@@ -224,40 +227,50 @@
                 </div>
 
             </div> -->
-        </div>
-    </section>
+            </div>
+        </section>
 
-    <section class="max-w-[1200px] mx-auto px-4 py-10">
-
-
-        <div id="cards" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+        <section class="max-w-[1200px] mx-auto px-4 py-10">
 
 
-        </div>
-    </section>
+            <div id="cards" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
 
-    <section>
-        <div class="flex justify-center mt-8 pb-8">
-  <div class="flex flex-wrap items-center gap-5 px-4 py-2 ">
 
-    <span class="cursor-pointer text-black"><<</span>
-    <span class="cursor-pointer text-black"><</span>
+            </div>
+        </section>
 
-    <span class="cursor-pointer text-black hover:text-orange-500 px-2 py-1 rounded text-sm sm:text-base">1</span>
-    <span class="cursor-pointer text-black hover:text-orange-500 px-2 py-1 rounded text-sm sm:text-base">2</span>
-    <span class="cursor-pointer text-black hover:text-orange-500 px-2 py-1 rounded text-sm sm:text-base">3</span>
-    <span class="cursor-pointer text-black hover:text-orange-500 px-2 py-1 rounded text-sm sm:text-base hidden sm:inline">4</span>
-    <span class="cursor-pointer text-black hover:text-orange-500 px-2 py-1 rounded text-sm sm:text-base hidden sm:inline">5</span>
-    <span class="cursor-pointer text-black hover:text-orange-500 px-2 py-1 rounded text-sm sm:text-base hidden md:inline">6</span>
-    <span class="cursor-pointer text-black hover:text-orange-500 px-2 py-1 rounded text-sm sm:text-base hidden lg:inline">7</span>
-    <span class="cursor-pointer text-black hover:text-orange-500 px-2 py-1 rounded text-sm sm:text-base hidden xl:inline">8</span>
-    <span class="cursor-pointer text-black">></span>
-    <span class="cursor-pointer text-black">>></span>
-  </div>
-</div>
-    </section>     
+        <section>
+            <div class="flex justify-center mt-8 pb-8">
+                <div class="flex flex-wrap items-center gap-5 px-4 py-2 ">
 
-     </main>
+                    <span class="cursor-pointer text-black">
+                        <<< /span>
+                            <span class="cursor-pointer text-black">
+                                << /span>
+
+                                    <span
+                                        class="cursor-pointer text-black hover:text-orange-500 px-2 py-1 rounded text-sm sm:text-base">1</span>
+                                    <span
+                                        class="cursor-pointer text-black hover:text-orange-500 px-2 py-1 rounded text-sm sm:text-base">2</span>
+                                    <span
+                                        class="cursor-pointer text-black hover:text-orange-500 px-2 py-1 rounded text-sm sm:text-base">3</span>
+                                    <span
+                                        class="cursor-pointer text-black hover:text-orange-500 px-2 py-1 rounded text-sm sm:text-base hidden sm:inline">4</span>
+                                    <span
+                                        class="cursor-pointer text-black hover:text-orange-500 px-2 py-1 rounded text-sm sm:text-base hidden sm:inline">5</span>
+                                    <span
+                                        class="cursor-pointer text-black hover:text-orange-500 px-2 py-1 rounded text-sm sm:text-base hidden md:inline">6</span>
+                                    <span
+                                        class="cursor-pointer text-black hover:text-orange-500 px-2 py-1 rounded text-sm sm:text-base hidden lg:inline">7</span>
+                                    <span
+                                        class="cursor-pointer text-black hover:text-orange-500 px-2 py-1 rounded text-sm sm:text-base hidden xl:inline">8</span>
+                                    <span class="cursor-pointer text-black">></span>
+                                    <span class="cursor-pointer text-black">>></span>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <footer class="bg-[#fff9f0] border-t border-gray-200 bg-cover bg-center"
         style="background-image: url('./images/footer-bg.png');">
@@ -276,7 +289,6 @@
                     <li><a href="#" class="hover:text-black transition">Соглашение</a></li>
                     <li><a href="#" class="hover:text-black transition">Политика обработки персональных данных</a></li>
                 </ul>
-
                 <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
                     <div class="flex items-center gap-4 text-gray-700">
                         <i data-lucide="facebook" class="w-5 h-5 hover:text-black transition"></i>
@@ -311,5 +323,3 @@
 
 
 </html>
-
-

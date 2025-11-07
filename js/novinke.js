@@ -32,3 +32,4 @@ sliceNovinkeProduct.map((el) =>{
 
             </div>`
 })
+

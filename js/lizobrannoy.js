@@ -8,18 +8,14 @@ console.log(likes);
 const container = document.getElementById("kategoriya");
 const likeBadge = document.getElementById("likeBadge");
 
-function updateLikeBadge() {
-  if (likeBadge) likeBadge.textContent = likes.length;
-}
-
-console.log(updateBadge());
+likeBadge.textContent = likes.length
 
 
 function removeFromLikes(id) {
   likes = likes.filter(item => item.id !== id);
   localStorage.setItem("likes", JSON.stringify(likes));
   showLikedProducts();
-  updateLikeBadge();
+likeBadge.textContent = likes.length
 }
 
 function showLikedProducts() {
@@ -32,7 +28,7 @@ function showLikedProducts() {
       </p>
       `
     ;
-    updateLikeBadge();
+    likeBadge.textContent = likes.length;
     return;
   }
 
@@ -66,8 +62,8 @@ function showLikedProducts() {
       </article> `
   });
 
-  updateLikeBadge();
+  likeBadge.textContent = likes.length;
 }
 
 showLikedProducts();
-updateLikeBadge();
+likeBadge.textContent = likes.length;

@@ -1,4 +1,4 @@
-let aktsi = document.getElementById("aktsi");
+let aktsi = document.getElementById("aktsi")
 let badge = document.getElementById("badge");
 
 let cart = JSON.parse(localStorage.getItem("carts") || "[]");

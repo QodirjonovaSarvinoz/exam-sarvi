@@ -2,109 +2,105 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
 
 </head>
 
 <body class="bg-[#faf8f4]">
-    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
-        <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+  <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
 
-            <div class="flex items-center space-x-3">
+      <div class="flex items-center space-x-3">
 
-                <button id="menuToggle" class="lg:hidden p-2 rounded-md border hover:bg-gray-100">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </button>
+        <button id="menuToggle" class="lg:hidden p-2 rounded-md border hover:bg-gray-100">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
 
-                <div class="flex items-center space-x-2">
-                  <a href="./index.html">  <img src="./images/Group (2).png" alt="logo" class="w-8 h-8"></a>
-                    <a href="./index.html"><span class="font-bold text-lg text-gray-800">Северяночка</span></a>
-                </div>
-
-                <button id="catalogToggle"
-                    class="hidden lg:flex items-center space-x-2 bg-green-100 text-green-700 font-semibold px-4 py-2 rounded-lg hover:bg-green-200 transition">
-                    <i data-lucide="menu" class="w-5 h-5"></i>
-                    <a href="./katalog.html"><span>Каталог</span></a>
-                </button>
-            </div>
-
-            <div class="hidden lg:flex flex-1 mx-6">
-                <input type="text" placeholder="Найти товар"
-                    class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none">
-            </div>
-
-            <div class="flex items-center space-x-4">
-                <button
-                    class="hidden lg:flex flex-col items-center text-sm text-gray-600 hover:text-green-600 relative">
-                    <a href="./izobrannoy.html"><i data-lucide="heart" class="w-5 h-5"></i></a>
-                    <a href="./izobrannoy.html"><span>Избранное</span></a>
-
-                    <span id="likeBadge"
-                        class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1 rounded-full">0</span>
-                </button>
-                <button class="hidden lg:flex flex-col items-center text-sm text-gray-600 hover:text-green-600">
-                    <a href="./product.html"><i data-lucide="package" class="w-5 h-5"></i></a>
-                    <a href="./product.html"><span>Продукты</span></a>
-                </button>
-                <button
-                    class="hidden lg:flex flex-col items-center text-sm text-gray-600 hover:text-green-600 relative">
-                    <a href="./korzina.html"><i data-lucide="shopping-cart" class="w-5 h-5"></i></a>
-                    <a href="./korzina.html"><span>Корзина</span></a>
-                    <span id="badge"
-                        class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1 rounded-full">0</span>
-                </button>
-                <button class="flex items-center space-x-2 hover:bg-gray-100 px-2 py-1 rounded-lg">
-                    <img src="./images/avatar (1).png" alt="user" class="rounded-full w-8 h-8">
-                    <span class="hidden lg:inline text-gray-800 font-medium">Алексей</span>
-                </button>
-            </div>
+        <div class="flex items-center space-x-2">
+          <a href="./index.html"> <img src="./images/Group (2).png" alt="logo" class="w-8 h-8"></a>
+          <a href="./index.html"><span class="font-bold text-lg text-gray-800">Северяночка</span></a>
         </div>
 
-        <div class="lg:hidden px-4 pb-3">
-            <input type="text" placeholder="Найти товар"
-                class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none">
-        </div>
+        <button id="catalogToggle"
+          class="hidden lg:flex items-center space-x-2 bg-green-100 text-green-700 font-semibold px-4 py-2 rounded-lg hover:bg-green-200 transition">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+          <a href="./katalog.html"><span>Каталог</span></a>
+        </button>
+      </div>
 
-        <nav id="mobileMenu" class="hidden flex-col bg-white border-t border-gray-200 lg:hidden">
-            <a href="./katalog.html" class="px-6 py-3 hover:bg-gray-100 flex items-center space-x-2">
-                <i data-lucide="menu" class="w-5 h-5"></i><span>Каталог</span>
-            </a>
-            <a href="./izobrannoy.html" class="px-6 py-3 hover:bg-gray-100 flex items-center space-x-2">
-                <i data-lucide="heart" class="w-5 h-5"></i><span>Избранное</span>
-            </a>
-            <a href="./product.html" class="px-6 py-3 hover:bg-gray-100 flex items-center space-x-2">
-                <i data-lucide="package" class="w-5 h-5"></i><span>Продукты</span>
-            </a>
-            <a href="./korzina.html" class="px-6 py-3 hover:bg-gray-100 flex items-center space-x-2">
-                <i data-lucide="shopping-cart" class="w-5 h-5"></i><span>Корзина</span>
-            </a>
-            <a href="#" class="px-6 py-3 hover:bg-gray-100 flex items-center space-x-2">
-                <i data-lucide="user" class="w-5 h-5"></i><span>Профиль</span>
-            </a>
-        </nav>
+      <div class="hidden lg:flex flex-1 mx-6">
+        <input type="text" placeholder="Найти товар"
+          class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none">
+      </div>
 
-        <div id="catalogMenu" class="hidden absolute left-0 w-full bg-white border-t border-gray-200 shadow-lg">
-            <div class="max-w-7xl mx-auto grid grid-cols-4 md:grid-cols-4 gap-4 p-6 text-gray-700">
-                <a href="./kategoriya.html" class="hover:text-green-600">Молоко, сыр, яйцо</a>
-                <a href="#" class="hover:text-green-600">Хлеб</a>
-                <a href="#" class="hover:text-green-600">Фрукты и овощи</a>
-                <a href="#" class="hover:text-green-600">Замороженные продукты</a>
-                <a href="#" class="hover:text-green-600">Напитки</a>
-                <a href="#" class="hover:text-green-600">Кондитерские изделия</a>
-                <a href="#" class="hover:text-green-600">Чай, кофе</a>
-                <a href="#" class="hover:text-green-600">Бакалея</a>
-                <a href="#" class="hover:text-green-600">Здоровое питание</a>
-                <a href="#" class="hover:text-green-600">Зоотовары</a>
-                <a href="#" class="hover:text-green-600">Непродовольственные товары</a>
-                <a href="#" class="hover:text-green-600">Детское питание</a>
-                <a href="#" class="hover:text-green-600">Мясо, птица, колбаса</a>
-            </div>
-        </div>
-    </header>
+      <div class="flex items-center space-x-4">
+        <button class="hidden lg:flex flex-col items-center text-sm text-gray-600 hover:text-green-600 relative">
+          <a href="./izobrannoy.html"><i data-lucide="heart" class="w-5 h-5"></i></a>
+          <a href="./izobrannoy.html"><span>Избранное</span></a>
+
+          <span id="likeBadge" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1 rounded-full">0</span>
+        </button>
+        <button class="hidden lg:flex flex-col items-center text-sm text-gray-600 hover:text-green-600">
+          <a href="./product.html"><i data-lucide="package" class="w-5 h-5"></i></a>
+          <a href="./product.html"><span>Продукты</span></a>
+        </button>
+        <button class="hidden lg:flex flex-col items-center text-sm text-gray-600 hover:text-green-600 relative">
+          <a href="./korzina.html"><i data-lucide="shopping-cart" class="w-5 h-5"></i></a>
+          <a href="./korzina.html"><span>Корзина</span></a>
+          <span id="badge" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1 rounded-full">0</span>
+        </button>
+        <button class="flex items-center space-x-2 hover:bg-gray-100 px-2 py-1 rounded-lg">
+          <img src="./images/avatar (1).png" alt="user" class="rounded-full w-8 h-8">
+          <span class="hidden lg:inline text-gray-800 font-medium">Алексей</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="lg:hidden px-4 pb-3">
+      <input type="text" placeholder="Найти товар"
+        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none">
+    </div>
+
+    <nav id="mobileMenu" class="hidden flex-col bg-white border-t border-gray-200 lg:hidden">
+      <a href="./katalog.html" class="px-6 py-3 hover:bg-gray-100 flex items-center space-x-2">
+        <i data-lucide="menu" class="w-5 h-5"></i><span>Каталог</span>
+      </a>
+      <a href="./izobrannoy.html" class="px-6 py-3 hover:bg-gray-100 flex items-center space-x-2">
+        <i data-lucide="heart" class="w-5 h-5"></i><span>Избранное</span>
+      </a>
+      <a href="./product.html" class="px-6 py-3 hover:bg-gray-100 flex items-center space-x-2">
+        <i data-lucide="package" class="w-5 h-5"></i><span>Продукты</span>
+      </a>
+      <a href="./korzina.html" class="px-6 py-3 hover:bg-gray-100 flex items-center space-x-2">
+        <i data-lucide="shopping-cart" class="w-5 h-5"></i><span>Корзина</span>
+      </a>
+      <a href="#" class="px-6 py-3 hover:bg-gray-100 flex items-center space-x-2">
+        <i data-lucide="user" class="w-5 h-5"></i><span>Профиль</span>
+      </a>
+    </nav>
+
+    <div id="catalogMenu" class="hidden absolute left-0 w-full bg-white border-t border-gray-200 shadow-lg">
+      <div class="max-w-7xl mx-auto grid grid-cols-4 md:grid-cols-4 gap-4 p-6 text-gray-700">
+        <a href="./kategoriya.html" class="hover:text-green-600">Молоко, сыр, яйцо</a>
+        <a href="#" class="hover:text-green-600">Хлеб</a>
+        <a href="#" class="hover:text-green-600">Фрукты и овощи</a>
+        <a href="#" class="hover:text-green-600">Замороженные продукты</a>
+        <a href="#" class="hover:text-green-600">Напитки</a>
+        <a href="#" class="hover:text-green-600">Кондитерские изделия</a>
+        <a href="#" class="hover:text-green-600">Чай, кофе</a>
+        <a href="#" class="hover:text-green-600">Бакалея</a>
+        <a href="#" class="hover:text-green-600">Здоровое питание</a>
+        <a href="#" class="hover:text-green-600">Зоотовары</a>
+        <a href="#" class="hover:text-green-600">Непродовольственные товары</a>
+        <a href="#" class="hover:text-green-600">Детское питание</a>
+        <a href="#" class="hover:text-green-600">Мясо, птица, колбаса</a>
+      </div>
+    </div>
+  </header>
 
 
   <main class="bg-[#f8f6e9] py-10">
@@ -340,10 +336,9 @@
     </div>
   </footer>
   <script src="./products-data.js"></script>
-  <script src="./js/kategoriya.js"></script>
   <script src="./js/index.js"></script>
-  <script src="./products-data.js"></script>
   <script src="./js/lizobrannoy.js"></script>
+  <script src="./js/kategoriya.js"></script>
 
   <script>
     lucide.createIcons();
@@ -361,6 +356,5 @@
     });
   </script>
 </body>
-
 
 </html>

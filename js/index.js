@@ -54,10 +54,10 @@ function showProducts() {
           ${
             inCart
               ? `
-              <div class="w-full grid grid-cols-3 gap-1 mt-6">
-                <button onclick="decrease(${el.id})" class="bg-orange-500 flex justify-center items-center rounded text-[18px] font-bold text-white">-</button>
+              <div class="w-full grid grid-cols-3 gap-1 ">
+                <button onclick="decrease(${el.id})" class="bg-orange-500 flex justify-center items-center rounded text-[18px] font-bold text-white py-1.5">-</button>
                 <span class="flex justify-center items-center rounded text-[18px] text-black">${inCart.numbers}</span>
-                <button onclick="increase(${el.id})" class="bg-green-500 flex justify-center items-center rounded text-[18px] font-bold text-white">+</button>
+                <button onclick="increase(${el.id})" class="bg-green-500 flex justify-center items-center rounded text-[18px] font-bold text-white py-1.5">+</button>
               </div> `
               : `
               <button onclick="addToCart(${el.id})" class="mt-auto border border-green-600 text-green-600 font-semibold rounded-lg py-2 w-full transition-all duration-300 hover:bg-orange-500 hover:border-orange-500 hover:text-white">

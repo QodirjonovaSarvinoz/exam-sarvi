@@ -531,7 +531,7 @@ const products = [
     name: "Chicken Alfredo",
     category: "Dinner",
     description:
-      "Chicken Alfredo is a pasta dish made with chicken, alsjfkdlkasdfhlkjh.",
+      "Chicken Alfredo is a pasta dish made with chicken, alsjfkdlkasdfhlkjh served as a main course.",
     price: 94,
     rating: 4,
     discount: 20,

@@ -6,7 +6,7 @@ const badge = document.getElementById("badge");
 
 badge.textContent = cart.length;
 
-// 🗑 Mahsulotni o‘chirish
+
 function removeFromCart(id) {
   cart = cart.filter(item => item.id !== id);
   localStorage.setItem("cart", JSON.stringify(cart));
@@ -14,7 +14,7 @@ function removeFromCart(id) {
   badge.textContent = cart.length;
 }
 
-// 🧮 Mahsulotlar ro‘yxatini chiqarish
+
 function showCartProducts() {
   container.innerHTML = "";
 
